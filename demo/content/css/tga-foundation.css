@@ -1,0 +1,204 @@
+@font-face{ 
+	font-family: 'Museo100';
+	src: url(../fonts/Museo_Slab_100.otf);
+}
+@font-face{ 
+	font-family: 'Museo300';
+	src: url(../fonts/Museo_Slab_300.otf);
+}
+@font-face{ 
+	font-family: 'Museo500';
+	src: url(../fonts/Museo_Slab_500.otf);
+}
+@font-face{ 
+	font-family: 'Museo700';
+	src: url(../fonts/Museo_Slab_700.otf);
+}
+@font-face{ 
+	font-family: 'Museo900';
+	src: url(../fonts/Museo_Slab_900.otf);
+}
+@font-face{ 
+	font-family: 'Museo1000';
+	src: url(../fonts/Museo_Slab_1000.otf);
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: url(../images/tga-ipad.png) 50% 0 no-repeat;
+	font-size: 62.5%;
+}
+/* For index(old).php
+#container {
+	height: 768px;
+	overflow: hidden;
+	width: 1024px;
+}
+#fpdiv {
+	background-color: #ccc;
+}
+*/
+ul li {
+	list-style-type: none;
+}
+li {
+	font-size: 1.2em;
+}
+li li {
+	font-size: 1em;
+}
+#ipadScreen {
+	background-color: #000;
+	display: block;
+	height: 768px;
+	left: 50%;
+	margin: 125px 0 0 -512px;
+	position: absolute;
+	width: 1024px;
+}
+#deviceBar {
+	background: #000 url(../images/tga-bckgrd-devicebar.gif) 0 0 no-repeat;
+	display: block;
+	height: 20px;
+	width: 1024px;	
+}
+#appView {
+	background-color: #fff;
+	display: block;
+	float: left;
+	height: 658px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: relative;
+	width: 1038px;
+}
+#mask {
+	background-color: #fff;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	display: block;
+	height: 698px;
+	overflow: hidden;
+	width: 1024px;	
+}
+#tabBar {
+	background: -webkit-gradient(linear, left top, left bottom, from(#6d6d6d), to(#020202));
+	background: -moz-linear-gradient(top, #6d6d6d, #020202);
+	border-top: 1px solid #545454;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;	
+	display: block;
+	height: 49px;
+	position: absolute;
+	width: 1024px;
+	z-index: 1;
+}
+#tabBar span.overlay {
+	background-color: rgba(255, 255, 255, 0.05);
+	height: 24px;
+	position: absolute;
+	width: 1024px;
+	z-index: 1;
+}
+#tabBar ul {
+	left: 50%;
+	margin: 0 0 0 -210px;
+	position: absolute;
+	z-index: 2;
+}
+#tabBar ul li {
+	display: block;
+	float: left;
+	margin: 0 15px;
+}
+#tabBar ul li a {
+	border-radius: 4px;
+	color: #666;
+	display: block;
+	font-family: Helvetica;
+	font-size: 0.8em;
+	margin: 2px 0;
+	padding: 28px 0 2px 0;
+	text-align: center;
+	text-decoration: none;
+	width: 74px;	
+}
+#tabBar ul li.selected a {
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(51, 51, 51, 0.4);
+	color: #fff;
+	font-weight: bold;
+}
+#tabBar ul li a span.icon {
+	display: block;
+	height: 100px;
+}
+#listings {
+	height: 800px;
+	/* 5 col */
+	width: 1024px;
+}
+body.wide #listings {
+	/* 4 col */
+	width: 1280px;
+}
+/* 16 grid */
+.half {
+	margin-left: 32px;
+}
+.one {
+	margin-left: 64px;
+}
+.oneHalf {
+	margin-left: 96px;
+}
+.two {
+	margin-left: 128px;
+}
+.twoHalf {
+	margin-left: 160px;
+}
+.three {
+	margin-left: 192px;
+}
+.four {
+	margin-left: 256px;
+}
+.five {
+	margin-left: 320px;
+}
+.six {
+	margin-left: 384px;
+}
+.seven {
+	margin-left: 448px;
+}
+.eight {
+	margin-left: 512px;
+}
+.nine {
+	margin-left: 576px;
+}
+.ten {
+	margin-left: 640px;
+}
+.eleven {
+	margin-left: 704px;
+}
+.twelve {
+	margin-left: 768px;
+}
+.thirteen {
+	margin-left: 832px;
+}
+.fourteen {
+	margin-left: 896px;
+}
+.fifteen {
+	margin-left: 960px;
+}
+.sixteen {
+	margin-left: 1024px;
+}

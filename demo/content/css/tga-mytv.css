@@ -1,0 +1,63 @@
+#myTV #weekDays li.selected a {
+	background-position: -70px 100%;
+}
+#myTV #scrollingBox {
+	background-color: #fff;
+	bottom: 35px;
+	border-top-right-radius: 0px;
+	padding: 0 12px;
+	top: 60px;
+	width: 1000px;
+}
+#myTV .theatreMode #scrollingBox {
+	background-color: #111;
+}
+#myTV #scrollingBox #scrollHorz {
+	width: 1010px;
+}
+#myTV #scrollingBox #scrollHorz .column {
+	margin: 0 20px 0 0;
+	width: 235px;
+}
+#myTV #scrollingBox #scrollHorz .column:last-child {
+	margin: 0;
+}
+#myTV #scrollingBox #scrollHorz .scrollColumn {
+	height: 298px;
+	padding: 100px 0 300px 0;
+	width: 250px;
+}
+#myTV span.topGradient {
+	background-color: #fff;
+	background-image: none;
+	height: 99px;
+	width: 1000px;
+}
+#myTV .theatreMode span.topGradient {
+	background-color: #111;
+}
+#myTV #scrollingBox .programme {
+	margin: 0 0 15px;
+	padding: 0 0 30px;
+}
+#myTV #scrollingBox .programmeDetails {
+	display: inherit;
+}
+#myTV #scrollingBox .programme .image {
+	height: inherit;
+	margin: 0 0 10px;
+}
+#myTV #scrollingBox .programme .image img {
+	display: inherit;
+}
+#myTV .programme li.image span.channel {
+	color: rgba(255, 102, 0, 1);
+	display: block;
+	margin: 0 0 5px;
+	position: inherit;
+	top: 0;
+}
+#myTV #scrollHorz h3 {
+	opacity: 1;
+	top: 27px;
+}

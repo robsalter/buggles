@@ -1,0 +1,751 @@
+/* Colours: ORANGE: e95d0f; TURQUOISE: 37b2b2; */
+#weekBar {
+	background: -webkit-gradient(linear, left top, left bottom, from(#6d6d6d), to(#020202));
+	background: -moz-linear-gradient(top, #6d6d6d, #020202);
+	float: left;
+	height: 40px;
+	width: 100%;
+}
+#weekBar ul li {
+	float: left;
+}
+#weekBar #date {
+	color: #fff;
+	float: left;
+	font-family: Museo300, sans-serif;
+	font-size: 1.6em;
+	text-transform: uppercase;
+}
+#weekBar li {
+	padding: 8px;
+}
+#weekBar li.dateSelected {
+	border-right: 1px solid #111;
+	font-family: Museo100, sans-serif;
+}
+#weekBar li.dateSelected span {
+	font-family: Museo700, sans-serif;
+}
+#weekBar li.dateInfo {
+	border-left: 1px solid #555;	
+	color: #999;
+}
+#controls #features {
+	float: right;
+	padding: 5px 10px 0;
+}
+#controls .toggle {
+	background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#111));
+	background: -moz-linear-gradient(top, #333, #111);
+	border: 1px solid rgba(51, 51, 51, 0.3);
+	border-radius: 4px;
+	float: left;
+	margin: 0 0 0 10px;
+}
+#controls .toggle li {
+	float: left;
+	padding: 0;
+}
+#controls .toggle li a {
+	border-radius: 2px;
+	color: #999;
+	font-family: Museo300, sans-serif;
+	display: block;
+	margin: 1px;
+	padding: 7px 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#controls .toggle li a:hover {
+	color: rgba(255, 102, 0, 1);
+	text-shadow: 0 0 5px rgba(255, 102, 0, 1);	
+}
+#controls .toggle li a.selected {
+	background: -webkit-gradient(linear, left top, left bottom, from(#777), to(#222));
+	background: -moz-linear-gradient(top, #777, #222);
+	color: #fff;	
+}
+#controls .toggle li a.selected:hover {
+	text-shadow: none;
+}
+/*
+#controls .weekDays {
+	font-size: 1.4em;
+	left: 50%;
+	margin: 2px 0 0 -190px;
+	position: absolute;
+}
+*/
+#weekDays {
+	left: 50%;
+	margin: 0 0 0 -200px;
+	position: absolute;
+}
+#weekDays li.selected a {
+	background-image: url(../images/tga-weekbar-selected.png);
+	background-position: 14px 100%;
+	background-repeat: no-repeat;
+	color: rgba(255, 255, 255, 1);
+	text-shadow: 0 0 20px rgba(255, 102, 0, 1);
+	padding: 11px 0;	
+}
+#weekDays li a {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: Museo100, sans-serif;
+	font-size: 1.6em;	
+	text-decoration: none;
+	text-transform: uppercase;	
+}
+#weekDays li a:hover {
+	text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);	
+}
+#weekDays li.selected a:hover {
+	text-shadow: 0 0 20px rgba(255, 102, 0, 1);		
+}
+#channelHeader {
+	background-color: rgba(255, 102, 0, 1);
+	background-image: url(../images/tga-channelbar-shadow.png);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	color: #fff;
+	float: left;
+	width: 100%;
+}
+#channelHeader ul li {
+	border-right: 1px solid rgba(255, 255, 255, 0.3);
+	float: left;
+	font-size: 1.6em;
+	font-family: Museo700, sans-serif;
+	font-weight: bold;
+	padding: 10px 11px;
+	/* 5 col */
+	width: 182px;
+}
+body.wide #channelHeader ul li {
+	/* 4 col */
+	width: 233px;
+}
+body.wide #channelHeader ul li.hide {
+	display: none;
+}
+.theatreMode #channelHeader ul li {
+	border-right: 1px solid #247c7c;
+}	
+#channelHeader ul li:last-child {
+	border: none;
+}
+.theatreMode #appView table {
+	background-color: #111;
+}
+.film ul li.time span.minutes {
+	background-image: url(../images/tga-icon-film.png);
+	background-position: 35px 2px;
+	background-repeat: no-repeat;
+	padding-right: 30px;
+}
+.theatreMode .film ul li.time span.minutes {
+	background-position: 35px -80px;
+}
+/*
+.film ul {
+	border-left: 6px solid rgba(255, 102, 0, 1);
+	margin: 0 0 0 -10px;
+	padding: 0 0 0 4px;
+}
+.film ul ul {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+*/
+#appView table {
+	background-color: #fff;
+	float: left;
+	padding: 0 0 40px;
+}
+ul ul li {
+	float: left;
+}
+ul li.programmeDetails ul {
+	float: left;
+	margin: 0 0 10px;
+	width: 100%;
+}
+ul li.info ul li {
+	border-radius: 2px;
+	font-family: Museo300, sans-serif;
+	margin: 0 4px 0 0;
+	padding: 2px 0;
+}
+.theatreMode li li {
+	color: #666;
+}
+ul li.info ul li.hd {
+	background-color: #666;
+	border-radius: 2px;	
+	color: #fff;
+	padding: 2px 4px;
+}
+.theatreMode ul li.info ul li.hd {
+	background-color: #333;
+	color: #666;
+}
+li.info ul li.subtitled,
+li.info ul li.widescreen,
+li.info ul li.repeat,
+li.info ul li.audiodescribed,
+li.info ul li.videoplus {
+	color: #666;
+}
+ul li.info ul li.repeat {
+	background-color: #7fae4d;
+	border-radius: 15px;	
+	color: #fff;
+	padding: 2px 5px;
+}
+.theatreMode ul li.info ul li.repeat {
+	background-color: #333;	
+	color: #666;
+}
+/*
+li.info ul li.subtitled {
+	background-color: #c8a209;
+	border-radius: 15px;
+	padding: 2px 5px;	
+	color: #fff;
+}
+li.info ul li.widescreen {
+	background-color: #688ab8;
+	color: #fff;
+}
+li.info ul li.audiodescribed {
+	background-color: #b18aad;
+	color: #fff;
+}
+.theatreMode #appView table ul li.info ul li {
+	background-color: #333;
+	color: #666;
+}
+.theatreMode #appView table ul li.info ul li.videoplus {
+	background-color: #111;
+	color: #666;
+}
+*/
+ul li.series ul {
+	font-family: Museo500, sans-serif;
+	margin: 5px 0 10px;
+}
+ul li.series ul li.episodeSeries {
+	margin: 0 10px 0 0;
+}
+/* Is time column necessary? */
+#appView table td.time {
+	display: none;
+}
+#appView table td.channel {
+	border-left: 1px solid #ccc;
+	/* 5 col */
+	width: 204px;
+}
+body.wide #appView table td.channel {	
+	/* 4 col */
+	width: 255px;
+}
+.theatreMode #appView table td.channel {
+	border-left: 1px solid #444;
+}
+#appView table td.channel:hover {
+/* 	background-color: #f5f5f5; */
+	cursor: pointer;
+}
+/*
+.theatreMode #appView table td.channel:hover {
+	background-color: #222;
+}
+*/
+#appView table tr td {
+	border-top: 1px dotted #ccc;
+}
+.theatreMode #appView table tr td {
+	border-top: 1px dotted #444;
+}
+.programme {
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	padding: 10px;
+}
+.programme li.social ul {
+	background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#eee));
+	background: -moz-linear-gradient(top, #ccc, #eee);
+	background-color: #ccc;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-top: 1px solid #999;	
+	bottom: 0;
+	float: left;
+	height: 33px;
+	margin: 5px 0 0 -10px;
+	padding: 10px;
+	position: absolute;
+	width: 235px;
+}
+.theatreMode .programme li.social ul {
+	background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#333));
+	background: -moz-linear-gradient(top, #000, #333);
+	background-color: #000;
+	border-top: 1px solid #333;
+}	
+.social a {
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+	background: -moz-linear-gradient(top, #fff, #ccc);
+	background-color: #ccc;
+	border-radius: 6px;
+	border: 1px solid #999;
+	color: #333;	
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;	
+	margin: 0 8px 0 0;
+	padding: 8px 11px;
+	position: relative;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #fff;
+}
+.social a:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#fff));
+	background: -moz-linear-gradient(top, #ccc, #fff);
+	background-color: #fff;
+}
+.social .fbBtn,
+.social .twtBtn {
+	padding: 8px 16px;
+	text-indent: -9000px;
+}
+.social .fbBtn {
+	background: -webkit-gradient(linear, left top, left bottom, from(#517ebd), to(#204e8d));
+	background: -moz-linear-gradient(top, #517ebd, #204e8d);
+	background-color: #204e8d;
+	border: 1px solid #2c4c78;	
+}
+.social .fbBtn:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#204e8d), to(#517ebd));
+	background: -moz-linear-gradient(top, #204e8d, #517ebd);
+	background-color: #517ebd;
+}
+.social .fbBtn span {
+	background: url(../images/nt-iphone-event-icon-facebook.png) 0 0 no-repeat;
+}	
+.social .twtBtn {
+	background: -webkit-gradient(linear, left top, left bottom, from(#7dd8ed), to(#4da7bd));
+	background: -moz-linear-gradient(top, #7dd8ed, #4da7bd);
+	background-color: #4da7bd;
+	border: 1px solid #41717d;	
+}
+.social .twtBtn:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#4da7bd), to(#7dd8ed));
+	background: -moz-linear-gradient(top, #4da7bd, #7dd8ed);
+	background-color: #7dd8ed;	
+}
+.social .skyrecord {
+	background: -webkit-gradient(linear, left top, left bottom, from(#c00), to(#800));
+	background-color: #c00;
+	border: 1px solid #800;
+	border-radius: 30px;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-size: 1.4em;
+	font-weight: normal;
+	color: #fff;
+	padding: 5px 9px;	
+	text-shadow: none;
+}
+.social .skyrecord:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#800), to(#c00));
+}	
+.programme li.time {
+	color: rgba(255, 102, 0, 1);
+	font-family: Museo300, sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	margin: 0 0 5px;
+	position: relative;
+}
+/*
+.hour .programme li.time {
+	font-family: Museo500, sans-serif;
+}
+*/
+/*
+.theatreMode .programme li.time {
+	color: #1a6161;
+}
+*/
+/* Use if hour time is to be different from other times
+#appView table tr.hour li.time {
+	color: rgba(255, 102, 0, 1);
+}
+*/
+.programme li.time .favourite {
+	color: #f90;
+	float: right;
+}
+.programme li.image {
+	margin: 0 0 5px;
+	position: relative;
+	width: 100%;
+}
+.programme li.image img {
+	width: 100%;
+}
+.programme li.image span.channel {
+	color: rgba(0, 0, 0, 0.5);
+	font-family: Museo900, sans-serif;
+	font-size: 1.6em;
+	left: 0;
+	padding: 0;
+	position: absolute;
+	top: 5px;
+}
+.theatreMode .programme li.image img {
+	opacity: 0.85;
+}
+/*
+.theatreMode #appView td.channel:hover li.image img {
+	opacity: 1;
+}
+*/
+/* This one's just for in detail view */
+.programme li.channel {
+	border-bottom: 1px solid #ccc;
+	color: #333;
+	font-family: Museo500, sans-serif;
+	font-size: 1.8em;
+	font-weight: bold;
+	line-height: 1.1em;
+	margin: 0 0 5px;
+	padding: 0 0 5px;
+}
+.theatreMode .programme li.channel {
+	border-bottom: 1px solid #333;
+	color: #fff;
+}
+.programme li.title {
+	color: #000;
+	font-family: Museo700, sans-serif;
+	font-size: 2.4em;
+	font-weight: bold;
+	line-height: 1.1em;
+	margin: 0 0 5px;
+}
+.theatreMode .programme li.title {
+	color: #fff;
+}
+.programme li.description {
+	color: #666;
+	float: left;
+	font-family: "Adobe Garamond Pro";
+	font-size: 1.6em;
+	line-height: 1.4em;
+	margin: 0 0 5px;
+	overflow: hidden;
+	position: relative;
+}
+#programmeColumn .programme li.description {
+	padding: 0;
+	width: 235px;
+}
+#programmeColumn .programme li.description .tabs {
+	background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#f5f5f5));
+	border: 1px solid #f5f5f5;
+	border-radius: 4px;
+	float: left;
+	margin: 0 0 8px;
+	padding: 1px;
+	width: 231px;	
+}	
+.theatreMode #programmeColumn .programme li.description .tabs {
+	background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#333));
+	border: 1px solid rgba(51, 51, 51, 0.3);
+}
+#programmeColumn .programme li.description .tabs li a {
+	border-radius: 2px;	
+	color: #333;	
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-family: Museo500, sans-serif;
+	font-size: 0.9em;
+	font-weight: normal;	
+	margin: 1px;
+	padding: 2px 6px 0;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	width: 63px;
+}
+.theatreMode #programmeColumn .programme li.description .tabs li a {
+	color: #999;
+}
+#programmeColumn .programme li.description .tabs li a.selected {
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+	color: #333;
+	font-weight: bold;
+}
+.theatreMode #programmeColumn .programme li.description .tabs li a.selected {
+	background: -webkit-gradient(linear, left top, left bottom, from(#777), to(#222));
+	color: #fff;
+	font-weight: bold;
+}
+/*
+#programmeColumn .programme li.description .tabs li:first-child a {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-right: none;
+}
+#programmeColumn .programme li.description .tabs li:last-child a {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-left: none;	
+}
+*/
+#programmeColumn li.description .columnContainer {
+	float: left;
+	position: relative;
+	width: 705px;
+}
+#programmeColumn li.description .column {
+	float: left;
+	overflow: hidden;
+	width: 235px;
+}
+.programme li.description .column div {
+	height: 308px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 0 20px 0 0;
+	width: 240px;
+}
+li.description .column .cast {
+	padding: 0;
+}
+li.description .column .cast dl {
+	border-bottom: 1px dotted #ccc;
+	float: left;
+	font-family: Museo500, sans-serif;
+	margin: 0 0 5px;
+	padding: 0 0 5px;
+	width: 235px;
+}
+.theatreMode li.description .column .cast dl {
+	border-bottom: 1px dotted #666;
+}
+li.description .column .cast dl:last-child {
+	border: none;
+	margin: 0 0 10px;
+}
+li.description .column .cast dt {
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+li.description .column .cast dd {
+	font-weight: bold;
+	text-align: right;
+}
+li.description .column .cast dd a {
+	color: #000;
+	text-decoration: none;
+}
+.theatreMode li.description .column .cast dd a {
+	color: #ccc;
+}
+.programme li.description span.episodeTitle {
+	color: #000;
+	font-family: Museo500, sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.theatreMode .programme li.description span.episodeTitle {
+	color: #ccc;
+}
+.programme li.description span.episodeTitle:after {
+	content: ': ';
+	padding: 0 0 0 2px;
+}
+.theatreMode .programme li.description {
+	color: #888;
+}
+/* For programmes that go over one hour */
+.playing li.time,
+.playing li.title,
+.playing li li,
+.playing li.description {
+	color: #999;
+}
+.theatreMode .playing li.time,
+.theatreMode .playing li.title,
+.theatreMode .playing li li,
+.theatreMode .playing li.description {
+	color: #444;
+}
+
+/* Programme in detail styles */
+#programmeMask {
+	bottom: 0;
+	height: 748px;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 20px;
+	width: 1024px;
+	z-index: 2;
+}
+#programmeDetail #progBckgrd {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 6px;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.theatreMode #programmeDetail #progBckgrd {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+#programmeColumn {
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	border-radius: 6px;	
+	height: 680px;
+	left: 50%;
+	margin: 0 0 0 -127px;
+	position: absolute;
+	top: 30px;
+	width: 255px;
+	z-index: 1;
+}
+.theatreMode #programmeColumn {
+	background-color: #222;
+}
+#programmeColumn .programmeDetails {
+	border-top: 1px dotted #ccc;
+	bottom: 55px;
+	padding: 10px 0 0 0;
+	position: absolute;
+	width: 235px;
+}
+.theatreMode #programmeColumn .programmeDetails {
+	border-top: 1px dotted #666;
+}
+#programmeWebViewBox {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+#closeProgWebViewBox {
+	background-color: rgba(255, 255, 255, 0.4);
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+.theatreMode #closeProgWebViewBox {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+#programmeWebView {
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;	
+	height: 680px;
+	left: 2270px;
+	position: absolute;	
+	width: 940px;
+	top: 30px;
+	z-index: 2;
+}
+.theatreMode #programmeWebView {
+	background-color: #222;
+}
+#iframeMask {
+	border-bottom-left-radius: 6px;
+	bottom: 0;
+	display: block;
+	height: 590px;
+	overflow: hidden;
+	position: absolute;
+	width: 924px;
+}
+#iframeMask iframe {
+	border: none;	
+	display: block;
+	height: 610px;
+	overflow: scroll;
+	width: 940px;
+}
+#progInfoDisplay {
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+	border-bottom: 1px solid #ccc;
+	border-top-left-radius: 6px;		
+	height: 69px;
+	position: absolute;
+	top: 0;
+	width: 940px;
+}
+.theatreMode #progInfoDisplay {
+	background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#111));
+	border-bottom: 1px solid #333;
+	border-top-left-radius: 6px;		
+	height: 69px;
+	position: absolute;
+	top: 0;
+	width: 940px;
+}
+#progInfoDisplay ul li {
+	border-right: 1px solid #ccc;
+	float: left;
+	font-size: 1.8em;
+	margin: 0 10px 0 0;
+	padding: 0 10px 0 0;
+}
+#progInfoDisplay ul li.channel {
+	border-bottom: none;
+	color: #666;
+}
+.theatreMode #progInfoDisplay ul li.channel {
+	color: #fff;
+}
+#progInfoDisplay ul li.without {
+	border-right: none;
+	font-family: Museo500, sans-serif;
+	color: #666;
+}
+.theatreMode #progInfoDisplay ul li.without {
+	color: #fff;
+}
+#progInfoDisplay ul li:last-child {
+	border-right: none;
+}
+#browserBar {
+	border-top: 1px dotted #ccc;
+	float: left;
+	margin: 5px 0 0;
+	padding: 12px 0 10px;
+	width: 900px;
+}
+.theatreMode #browserBar {
+	border-top: 1px dotted #666;
+}
+#browserBar input {
+	color: #666;
+	font-size: 1.4em;
+	padding: 4px;
+	width: 600px;
+}
