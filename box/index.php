@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-GB">
 	<head>
-		<title>Hammer time! &lt; Buggles</title>
+		<title>box</title>
 		<?php include('includes/head.php'); ?>
 	</head>
-	<body>
+	<body class="perpage" onload="setTimeout(function() { window.scrollTo(0, 1) }, 100)">
 		<div class="wrapper">
 			<header>
 				<div class="toggle">
@@ -20,6 +20,19 @@
 					<ul>
 						<li class="channel">
 							<div class="gutter">
+								<article class="featured">
+									<ul class="feat">
+										<li>Featured</li>
+										<li>22:00</li>
+									</ul>
+									<div class="box">
+										<h1>Lovely chips</h1>
+										<p>Sed posuere consectetur est at lobortis.</p>
+									</div>	
+									<figure>
+										<img src="images/appfeatured.jpg" />
+									</figure>
+								</article>
 								<article>
 									<dl>
 										<dt>Masterchef</dt>
@@ -178,9 +191,10 @@
 			<div class="section back">
 				<div class="controls">
 					<ul>
-						<li>Yay!</li>
-						<li>I got it to work</li>
-						<li>Thanks, hammer time!</li>
+						<li class="selected"><a href="">Channel per page view</a></li>
+						<li><a href="vert.php">Vertical multi-channel view</a></li>
+						<li><a href="horz.php">Horizontal multi-channel view</a></li>
+						<li><a href="" class="toggleTime">Time switch</a></li>
 					</ul>
 				</div>
 			</div>
@@ -189,6 +203,16 @@
 		<script type="text/javascript">
 			var carousel = new Carousel(".channels");
 			carousel.init();
+			
+			var a=$(".controls a");
+			for(var i=0;i<a.length;i++)
+			{
+			    a[i].onclick=function()
+			    {
+			        window.location=this.getAttribute("href");
+			        return false
+			    }
+			}
 		</script>
 	</body>
 </html>	
