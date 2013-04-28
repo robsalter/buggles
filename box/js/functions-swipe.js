@@ -151,4 +151,6 @@ function Carousel(element)
 
     element.hammer({ drag_lock_to_axis: true })
         .on("release dragleft dragright swipeleft swiperight", handleHammer);
+        
+         //$('.channels').ready().css("width", "50%");
 }    

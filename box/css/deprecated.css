@@ -1,0 +1,56 @@
+/* CSS that doesn't get called */
+/* Old feat prog */
+article.featured {
+	border: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+article.featured .feat {
+	position: absolute;
+	text-align: center;
+	top: 10px;
+	width: 100%;
+}
+article.featured .feat li {
+	background-color: rgba(255, 255, 255, .4);
+	color: rgba(255, 255, 255, 1);
+	display: inline;
+	font-size: .75em;
+	margin: 0;
+	padding: 4px 6px;
+	text-transform: uppercase;
+}
+article.featured .feat li:first-child {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	font-weight: bold;
+}
+article.featured .feat li:last-child {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+article.featured .box {
+	bottom: 5px;
+	left: 5px;
+	position: absolute;
+	right: 5px;
+	text-align: center;
+}
+article.featured .box h1 {
+	background-color: rgba(242, 101, 34, 1);
+	color: #fff;
+	display: inline-block;
+	font-family: "proxima-nova";
+	font-size: 1.4em;
+	font-weight: 700;
+	padding: 7px;
+}
+article.featured .box p {
+	background-color: rgba(255, 255, 255, 1);
+	clear: both;	
+	color: #333;
+	display: inline-block;
+	font-size: 0.85em;
+	padding: 7px;
+}
