@@ -5,20 +5,23 @@ body {
 }
 .wrapper {
 	background-color: #fff;
+	height: 100%;
 	margin: 0 auto;
 	width: 100%;
 }
 header {
 	background-color: rgba(242, 101, 34, 1);
-	height: 40px;
+	height: 36px;
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 2000;
+	z-index: 30;
 }
 #result {
 	background-color: #fff;
+	color: #333;
 	float: right;
+	width: 200px;
 }
 header ul {
 	float: left;
@@ -34,17 +37,15 @@ header ul li {
 header ul li:last-child {
 	margin-right: 5px;
 }
-header ul li.settings i {
+header [class^="icon-"] {
 	font-size: 1.4em;
 	line-height: 1.4em;
 }
-header ul li.settings span {
+header ul li i + span {
 	left: -9999em;
 	position: absolute;
 }
-/*
-header ul li a,
-header ul li button {
+header ul li a {
 	background-color: rgba(0, 0, 0, .5);
 	border: none;
 	border-radius: 2px;
@@ -54,74 +55,65 @@ header ul li button {
 	text-decoration: none;
 	width: 30px;
 }
-header ul li.settings a {
-
-}
-header ul li.tempToggle {
-	float: right;
-}
-header ul li.tempToggle button {
-	color: #333;
-}
-*/
-.toggle {
-	bottom: 5px;
-	height: 30px;
-	left: 5px;	
-	position: absolute;
-	-webkit-perspective: 800;
-	width: 30px;
-	z-index: 4;	
-}
-.toggle div {
+.section,
+.container,
+.overlay {
 	height: 100%;
 	position: absolute;
-	-webkit-transform-style: preserve-3d;
-	-webkit-transition: -webkit-transform 1s;
-	width: 100%;	
-}
-.toggle a {
-	height: 100%;
-	position: absolute;
-	text-indent: -9999em;	
-	-webkit-backface-visibility: hidden;	
 	width: 100%;
-}
-.toggleJesus {
-	background-color: #000;
-}
-.toggleSusej {
-	background-color: #fc0;
-	-webkit-transform: rotateY(180deg);
-}
-.toggle .flipped {
-	-webkit-transform: rotateY(180deg);
+	-webkit-transition: all 0.5s ease;	
 }
 .section {
-	height: 100%;
+	overflow: hidden;
+}
+.container {
+	border: 4px solid rgba(242, 101, 34, 1);
+	border-bottom: none;
+	box-sizing: border-box;	
+	-webkit-transform-origin: 50% 0px;
+	z-index: 10;
+}
+.calendar {
+	background-color: #000;
+	display: block;
+	height: 200px;
 	position: absolute;
 	width: 100%;
+	z-index: 20;
+	-webkit-transition: all 0.5s ease;
+	-webkit-transform: translateY(-100%);	
+}
+.calendar.active {
+	-webkit-transform: translateY(0);
 }
 .front {
 	background-color: #fff;
-	border: 4px solid rgba(242, 101, 34, 1);
-	border-radius: 10px;
-	box-sizing: border-box;	
-	padding-top: 36px;		
+	border-bottom: 4px solid rgba(242, 101, 34, 1);	
+	box-sizing: border-box;
+	padding-top: 36px;
 	z-index: 10;
 }
+.container.active {
+	-webkit-transform: translateY(200px); 
+}
+.front.backExposed,
+header.headerMoved {
+	-webkit-transform: translateX(280px);
+	-webkit-transition-timing-function: ease-out;
+}
 .back {
-	background-color: rgba(242, 101, 34, 1);
+	background-color: rgba(34, 34, 34, 1);
 	z-index: 1;
 }
 .back .controls {
 	float: left;
 	margin: 0;
-	padding: 40px 0 0;
+	padding: 0;
 	width: 95%;
 }
 .back .controls li {
 	color: #fff;
+	font-size: .85em;
 	margin: 0 0 1px;
 }
 .back .controls li a {
@@ -137,6 +129,15 @@ header ul li.tempToggle button {
 .back .controls li.selected a {
 	background-color: rgba(255, 255, 255, .9);
 	color: #333;
+}
+.overlay {
+	background-color: #fff;
+	-webkit-transform: translateY(100%);
+	-webkit-transition: -webkit-transform .5s ease-out;
+	z-index: 40;
+}
+.overlayExposed {
+	-webkit-transform: translateY(0);
 }
 .grid {
 	float: left;
@@ -210,7 +211,7 @@ header ul li.tempToggle button {
 	height: 100%;
 	min-height: 100%;
 	overflow: hidden;
-	width: 100%;
+	width: 50%;
 }
 .channels>ul {
 	background-color: #fff;
@@ -404,8 +405,10 @@ article dd {
 	font-weight: 600;
 }
 .p-details {
+	float: left;
 	font-weight: 300;
 	margin: .3em 0 .2em;
+	width: 100%;
 }
 .p-details ul li {
 	color: #666;

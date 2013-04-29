@@ -1,30 +1,29 @@
 $(document).ready(function () {
-// Toggle Jesus
-    $('.toggle div').click(function(e){
-	    $(this).toggleClass('flipped');
-	    e.preventDefault();
-    });
-    
-    $('.settings a').click(function(e){
-    	$('.front').animate({
-			"left": "300px"
-		}, 500);
-	    e.preventDefault();
-    });
-    
-    $('.toggleJesus').click(function(e){
-    	$('.front').animate({
-			"left": "300px"
-		}, 500);
-	    e.preventDefault();
-    });
-    $('.toggleSusej').click(function(e){
-    	$('.front').animate({
-			"left": "0"
-		}, 500);
-	    e.preventDefault();
-    });
-    
+
+	// Appends classes for activing CSS transitions
+	// Should improve performance
+	$('.exposeBack').click(function(e){
+		$('.front').toggleClass('backExposed');
+		$('.wrapper > header').toggleClass('headerMoved');
+		e.preventDefault();
+	});
+	$('.exposeOverlay').click(function(e){
+		$('.overlay').addClass('overlayExposed');
+		e.preventDefault();
+	});
+	$('.closeOverlay').click(function(e){
+		$('.overlay').removeClass('overlayExposed');
+		e.preventDefault();
+	});
+	$('.exposeCalendar').click(function(e){
+		$('.container').toggleClass('active');
+		$('.calendar').toggleClass('active');
+		//$('.exposeBack').parent().parent().toggleClass('calendarExposed');
+		// switch off exposeBack
+		e.preventDefault();
+	});
+
+	// Temporary scroll readout    
     $('#result').click(function(e){
     	$('.channels').css({
 	    	'width':'100%'
@@ -32,22 +31,16 @@ $(document).ready(function () {
 	    e.preventDefault();
     });
 
+    // Helps keep channel names in view, doesn't work so well on phones :(
 	$('.channels>ul').scroll(function (e) {
-		
     	var elementScrollTop = $('.channels>ul').scrollTop();
-    	
     	$('.channel>h1').css({
         	"top" : + elementScrollTop
     	});
-    	
     	$("#result").html("scrollTop: <span>" + elementScrollTop + "</span>");
-    	
     	e.preventDefault();
     });
-
-});
-
-$(document).ready(function () {
+    
 	// Change into 12/24 hour times
 	$('.sd-time').hide();
 	$('.sd-time').click(function(e) {
@@ -60,6 +53,7 @@ $(document).ready(function () {
 		$('.dd-time').show();
 		e.preventDefault();
 	});
+	// Doesn't work for AM times (they'll get changed as well!)
 	$('.dd-time').click(function(e) {
 		$('.hour').each(function() {
 			var currentValue = $(this).text();
@@ -96,7 +90,8 @@ $(document).ready(function () {
 	// variations will occur across channels, but more importantly, programmes in the next hour
 	// sit in the correct place... not great for usability(?) but works nonetheless...
 	
-	$('.h-group').each(function() {
+	/*
+$('.h-group').each(function() {
 		var hump = $(this).find('article').length;
 		if (hump >= 2) {
 			var total = $(this).find('article:nth-child(2) .minutes').text();
@@ -105,6 +100,7 @@ $(document).ready(function () {
 			}
 		}
 	});
+*/
 	
 	// Probably not optimised (and overly complicated), but I wrote some JS and it flippin' worked!!!
 	// Target channel lists (but per row, rather than using global content to inform all rows + cols)
