@@ -7,7 +7,8 @@ $(document).ready(function () {
 		$('.wrapper > header').toggleClass('headerMoved');
 		e.preventDefault();
 	});
-	$('.exposeOverlay').click(function(e){
+	// Expose overlay
+	$('article').click(function(e){
 		$('.overlay').addClass('overlayExposed');
 		e.preventDefault();
 	});
@@ -32,6 +33,7 @@ $(document).ready(function () {
     });
 
     // Helps keep channel names in view, doesn't work so well on phones :(
+    // Performance depletion specialist codeage
 	$('.channels>ul').scroll(function (e) {
     	var elementScrollTop = $('.channels>ul').scrollTop();
     	$('.channel>h1').css({
@@ -64,68 +66,147 @@ $(document).ready(function () {
 		$('.sd-time').show();
 		e.preventDefault();
 	});
-
-	// I know it does something, I just don't know what...
-	
-	$('.h-group').each(function() {
-		var articles = $(this).find('article').length;
-		if (articles == 0) {
-			$(this).addClass('empty');
-		}
-		if (articles == 2) {
-			$(this).addClass('h-p-two');
-		}
-		if (articles == 3) {
-			$(this).addClass('h-p-three');
-		}
-		if (articles == 4) {
-			$(this).addClass('h-p-four');
-		}
-		if (articles == 5) {
-			$(this).addClass('h-p-five');
-		}
-	});
-	
-	// This is a bit crap (JS just below). I'm thinking it's best to not worry about programmes within an hour
-	// variations will occur across channels, but more importantly, programmes in the next hour
-	// sit in the correct place... not great for usability(?) but works nonetheless...
-	
-	/*
-$('.h-group').each(function() {
-		var hump = $(this).find('article').length;
-		if (hump >= 2) {
-			var total = $(this).find('article:nth-child(2) .minutes').text();
-			if (total == 30) {
-				$(this).find('article:nth-child(2)').addClass('h-h-prog');
-			}
-		}
-	});
-*/
 	
 	// Probably not optimised (and overly complicated), but I wrote some JS and it flippin' worked!!!
 	// Target channel lists (but per row, rather than using global content to inform all rows + cols)
 	
 	$('.channel .gutter').each(function() {
 		// Loop for each hour of day
-		for (var i = 1; i <= 24; i++) {
+		for (var i = 1; i <= 288; i++) {
 			// Target only direct children, load into variable
 			var nth = $(this).find('> :nth-child(' + [i] +')')
 			// Use looping variable to add hourly class name
-			$(nth).addClass('h' + '-' + [i]);
+			$(nth).addClass('m' + '-' + [i]);
 			// Var up max height
 			var maxHeight = -1;
 			// Use looping number to fix heights in each hour row based on its longest piece of content
-			$('.h-' + [i]).each(function() {
+			$('.m-' + [i]).each(function() {
 				maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
 			});
-			$('.h-' + [i]).each(function() {
+			$('.m-' + [i]).each(function() {
 				$(this).height(maxHeight);
 			});
 		}
 	});
 	
+	// Add class to '.m-group's that have a programme in them	
+	$('.m-group').children('article').parent().addClass('programme');
+
+	// If programme starts at 00 (on the hour) add relevant class
+	$('.programme').each(function() {
+		var minutes = $(this).find('.minutes').text();
+		if (minutes == 0) {
+			$(this).addClass('on-the-hour');
+		}
+	});
+	
+	// Uses plugin to keep programme details in view when user scrolls down to see suceeding progs
+	// Will work awesomely once programme div can expand into available true prog space/height
+	$('.m-group').ready(function(){
+		var height = $(this).height();
+		if (height > 100) {
+			$('.front article dl').jScroll({speed : 200, top: 85});
+		}
+	});
+	
+	// Removes all those '.m-group' divs from the DOM that have no content/height
+	$('.m-group').each(function(){
+		var height = $(this).height();
+		if (height == 0) {
+			$(this).remove();
+		}
+	});
+
+
+	/*
+		Somehow we need to find out the heights of the remaining divs with height more than 0
+		Take those values and add them to the '.programme' elements existing heights
+		Then remove those excess divs from the DOM
+		That way, once achieved, all that remains are the visible programmes which will then fill the available space and keep the layout/order
+		
+		Below is my shoddy attempt at trying to do this... here my jQuery/JS knowledge sucks...
+	*/
+
+	var list = [];
+	$('.programme').siblings().nextUntil('.programme', function() {
+		var total = $(this).height();
+		console.log(total);
+		//total += parseInt(list[total]);
+		list.push(total);
+		console.log(list);
+	});
+
+
+    
+	/*
+	
+	// crap JS by Salter
+	
+$('.actively').siblings().nextUntil('.actively').end().each(function() {
+		
+		
+			var total = $(this).height();
+			console.log(total);
+			list.push(total);
+		var sum = total;
+		sum += total;
+		console.log(sum);
+	});
+*/
+
+	
+	
+	/*
+var total = 0;
+	for (var i = 0; i < list.length; i++) {
+	    total += parseInt(list[i]);
+	}
+	
+	console.log(total);
+*/
+	
+	/*
+var someArray = [];
+	var total = 0;
+	
+	$('.actively').siblings().nextUntil('.actively').each(function() {
+		var total = 0;
+		total += $(this).height();
+	});
+	
+	
+for (var i = 0; i < someArray.nextUntil('.actively'); i++) {
+    total += parseInt(someArray[i]);
+}
+*/
+	
+	
+	
+	
+	
+	/*
+$('.actively').siblings().nextUntil('.actively').each(function() {
+		var total = 0;
+		total += $(this).height();
+		console.log(total);
+	});
+*/
+	
+
+/*
+
+
+		//$(this).siblings('article');
+		
+		// var totalheights = $
+		// var nextprog = $(this).siblings().next('article');
+	});
+*/
+	
 	// Target only those articles that start after the hour, whack on some silage
-	$('.h-group article:first-child .minutes').each(function() {
+	// Now pointless and defunct
+	/*
+$('.h-group article:first-child .minutes').each(function() {
 		var minsover = $(this).text();
 		if (minsover == 5) {
 		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-five');
@@ -161,6 +242,7 @@ $('.h-group').each(function() {
 		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-fiftyfive');
 	    }
 	});
+*/
 	
 	/*
 		- PROG GENRES -- for adding to aid easier sight of films, news etc
@@ -169,19 +251,19 @@ $('.h-group').each(function() {
 	*/
 	
 	$('.film').each(function() {
-		$(this).children().children('dt').append('<i class="icon-film"></i>');
+		$(this).children().children('.p-channel').append(' <i class="icon-film"></i>');
 	});
 	$('.sport').each(function() {
-		$(this).children().children('dt').append('<i class="icon-trophy"></i>');
+		$(this).children().children('.p-channel').append(' <i class="icon-trophy"></i>');
 	});
 	$('.news').each(function() {
-		$(this).children().children('dt').append('<i class="icon-quote-right"></i>');
+		$(this).children().children('.p-channel').append(' <i class="icon-quote-right"></i>');
 	});
 	$('.quiz').each(function() {
-		$(this).children().children('dt').append('<i class="icon-comment-alt"></i>');
+		$(this).children().children('.p-channel').append(' <i class="icon-comment-alt"></i>');
 	});
 	$('.food').each(function() {
-		$(this).children().children('dt').append('<i class="icon-food"></i>');
+		$(this).children().children('.p-channel').append(' <i class="icon-food"></i>');
 	});
 	
 	
