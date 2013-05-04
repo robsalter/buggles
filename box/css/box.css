@@ -4,7 +4,7 @@ body {
 	margin: 0;
 }
 .wrapper {
-	background-color: #fff;
+	background-color: rgba(242, 101, 34, 1);
 	height: 100%;
 	margin: 0 auto;
 	width: 100%;
@@ -23,23 +23,45 @@ header ul {
 	width: 100%;
 }
 header ul li {
-	font-family: "proxima-nova";
+	font-family: "proxima-nova", Helvetica, sans-serif;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 	position: relative;
-	width: 33%;
+	width: 33.3333333%;
 }
 header ul li:first-child {
 	float: left;
 }
 header ul li:nth-child(2) {
-	background-color: rgba(51, 51, 51, 1);
 	display: inline-block;
 	text-align: center;
 }
+header ul li:nth-child(2) a {
+	background: #f26522;
+	background: -moz-linear-gradient(top,  #f26522 25%, #d85108 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(25%,#f26522), color-stop(100%,#d85108));
+	background: -webkit-linear-gradient(top,  #f26522 25%,#d85108 100%);
+	background: -o-linear-gradient(top,  #f26522 25%,#d85108 100%);
+	background: -ms-linear-gradient(top,  #f26522 25%,#d85108 100%);
+	background: linear-gradient(to bottom,  #f26522 25%,#d85108 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26522', endColorstr='#d85108',GradientType=0 );
+}
+header ul li:nth-child(2) a:active {
+	background: #d85108;
+	background: -moz-linear-gradient(top,  #d85108 0%, #f26522 75%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d85108), color-stop(75%,#f26522));
+	background: -webkit-linear-gradient(top,  #d85108 0%,#f26522 75%);
+	background: -o-linear-gradient(top,  #d85108 0%,#f26522 75%);
+	background: -ms-linear-gradient(top,  #d85108 0%,#f26522 75%);
+	background: linear-gradient(to bottom,  #d85108 0%,#f26522 75%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d85108', endColorstr='#f26522',GradientType=0 );
+}	
 header ul li:last-child {
-	float: right;
+	/* float: right; */
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 header ul li a {
 	color: #fff;
@@ -47,31 +69,55 @@ header ul li a {
 	height: 100%;
 	text-decoration: none;
 }
-header .exposeBack i {
-	font-size: 1.8em;
+header li:first-child .topControl {
+	text-align: left;
+}
+header li:first-child .topControl i {
 	margin: .5em 0 0 .3em;
+}
+header li:last-child .topControl {
+	text-align: right;
+}
+header li:last-child .topControl i {
+	margin: .5em .3em 0 0;
+}
+header .topControl i {
+	font-size: 1.8em;
 	position: relative;
 }
-header .exposeBack span {
+header .topControl span {
 	left: -9999em;
 	position: absolute;
 }
 header .exposeCalendar {
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 3px;
+	height: 48px;
+	margin: 3px 25%;
 	text-transform: uppercase;
 }
-header .exposeCalendar span {
+header .exposeCalendar span,
+.calendar table span {
 	color: #fff;
-	display: block;
-	font-weight: 300;	
+	display: block;	
 }
-header .exposeCalendar .calday {
+.calday {
 	font-size: .5em;
-	font-weight: 800;
-	margin: .7em 0 .1em;
+	font-weight: 400;
+	text-transform: uppercase;
 }
-header .exposeCalendar .calnumber {
-	font-size: 2.4em;
+header .calday {
+	padding: .7em 0 0;
 }
+.calnumber {
+	font-size: 2em;
+	font-weight: 400;
+}
+/*
+header .calendarswipe {
+	
+}
+*/
 .section,
 .container,
 .overlay {
@@ -91,44 +137,104 @@ header .exposeCalendar .calnumber {
 .calendar {
 	background-color: #000;
 	display: block;
-	height: 200px;
+	height: 126px;
 	overflow: hidden;
 	position: absolute;
 	width: 100%;
 	z-index: 20;
 	-webkit-transition: all 0.5s ease;
-	-webkit-transform: translateY(-100%);	
+	-webkit-transform: translateY(-200%);	
 }
 .calendar.active {
 	-webkit-transform: translateY(0);
 }
+.calendar table {
+	border-collapse: collapse;
+	font-family: "proxima-nova", Helvetica, sans-serif;
+	width: 100%;
+}
+.calendar table th {
+	background-color: rgba(68, 68, 68, 1);
+	border: 1px solid rgba(0, 0, 0, .4);
+	color: #ccc;
+	font-size: .85em;
+	font-weight: 300;
+	height: 22px;
+	vertical-align: middle;
+	text-transform: uppercase;
+	width: 14.2857143%;
+}
+.calendar table th:first-child,
+.calendar table td:first-child {
+	border-left: none;
+}
+.calendar table th:last-child,
+.calendar table td:last-child {
+	border-right: none;
+}
+.calendar table tr {
+	width: 100%;
+}
+.calendar table tr td {
+	background-color: #222;
+	border: 1px solid rgba(0, 0, 0, .4);
+	text-align: center;
+	vertical-align: top;
+	width: 14.2857143%;
+}
+.calendar table a {
+	color: #ccc;
+	display: block;
+	padding: .6em 0;
+	text-decoration: none;	
+}
+.calendar table a:hover {
+	background-color: rgba(255, 255, 255, .2);
+	color: #fff;
+}
+.calendar table .today a {
+	background-color: rgba(0, 0, 0, .9);
+	color: #ccc;
+}
+.calendar table .active a {
+	background-color: rgba(242, 101, 34, 1);
+	color: #fff;
+}
+.calendar table .inactive a {
+	background-color: rgba(255, 255, 255, .1);
+}
+.calendar table .inactive a span {
+	color: #666;
+}
 .front {
-	background-color: #fff;
-	/* border-bottom: 4px solid rgba(242, 101, 34, 1);	 */
+	background-color: rgba(242, 101, 34, 1);
 	box-sizing: border-box;
 	padding-top: 56px;
 	z-index: 10;
 }
+/*
 .container.active {
-	-webkit-transform: translateY(200px); 
+	-webkit-transform: translateY(126px); 
 }
+*/
 .front.backExposed,
 header.headerMoved {
 	-webkit-transform: translateX(270px);
 	-webkit-transition-timing-function: ease-out;
 }
 .back {
-	background-color: rgba(34, 34, 34, 1);
+	background-color: rgba(17, 17, 17, 1);
 	z-index: 1;
 }
 .back .controls {
 	float: left;
 	margin: 0;
-	padding: 0;
-	width: 95%;
+	padding: 0 10px 0 0;
+	width: 270px;
 }
 .back .controls li {
 	color: #fff;
+	font-family: "proxima-nova", Helvetica, sans-serif;		
 	font-size: .85em;
 	margin: 0 0 1px;
 }
@@ -146,11 +252,66 @@ header.headerMoved {
 	background-color: rgba(255, 255, 255, .9);
 	color: #333;
 }
+.back .controls .buttons {
+	bottom: 0;
+	position: absolute;
+}
+.back .controls .buttons li {
+	background-color: rgba(255, 255, 255, .2);
+	float: left;
+	margin: 0;
+	padding: 10px;
+	width: 115px;
+}
+.back .controls .buttons li span {
+	display: block;
+	font-family: "proxima-nova", Helvetica, sans-serif;
+	margin: 0 0 .5em;
+}
+.back .controls button {
+	background: #7d7e7d;
+	background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e));
+	background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%);
+	background: -o-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%);
+	background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%);
+	background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 );
+	border: none;
+	color: #fff;
+	font-family: "proxima-nova", Helvetica, sans-serif;		
+	font-weight: 300;
+	line-height: 1.2em;
+	margin: 0;	
+	padding: 6px 12px;
+	text-transform: uppercase;
+}
+.back .controls button[disabled="disabled"] {
+	background: #d85108;
+	background: -moz-linear-gradient(top,  #d85108 0%, #f26522 75%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d85108), color-stop(75%,#f26522));
+	background: -webkit-linear-gradient(top,  #d85108 0%,#f26522 75%);
+	background: -o-linear-gradient(top,  #d85108 0%,#f26522 75%);
+	background: -ms-linear-gradient(top,  #d85108 0%,#f26522 75%);
+	background: linear-gradient(to bottom,  #d85108 0%,#f26522 75%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d85108', endColorstr='#f26522',GradientType=0 );
+	font-weight: 700;
+}
+.back .controls button:nth-child(2) {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	margin-right: -5px;	
+}
+.back .controls button:last-child {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;	
+}
 .overlay {
 	background-color: #999;
+	box-shadow: 2px 0 12px rgba(0, 0, 0, .2);
 	overflow: scroll;
 	-webkit-overflow-scrolling: touch;
-	-webkit-transform: translateY(-100%);
+	-webkit-transform: translateX(-110%);
 	-webkit-transition: -webkit-transform .5s ease-out;
 	z-index: 4000;
 }
@@ -160,7 +321,7 @@ header.headerMoved {
 	padding: 10px;
 }
 .overlayExposed {
-	-webkit-transform: translateY(0);
+	-webkit-transform: translateX(0);
 }
 .closeOverlay {
 	background-image: url('../images/appclosecorner.png');
@@ -251,14 +412,13 @@ header.headerMoved {
 	height: 100%;
 	min-height: 100%;
 	overflow: hidden;
-	width: 50%;
+	width: 50%;	
 }
 .channels>ul {
 	background-color: #fff;
 	overflow: scroll;
 	-webkit-overflow-scrolling: touch;
 }
-/* End of handling 2-up in view */
 ul.animate {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
@@ -289,9 +449,7 @@ overflow: scroll;
 	border: none;
 }
 .channel .gutter {
-	background-image: url('../images/bckgrd-dotted.gif');
-	background-position: 100% 0;
-	background-repeat: repeat-y;
+	border-right: 1px dotted rgba(242, 101, 34, .3);
 	box-sizing: border-box;
 	float: left;
 	margin: 24px 0 0;
@@ -300,18 +458,15 @@ overflow: scroll;
 	padding: 0 0 56px;
 	width: 100%;
 }
-.channel .gutter .h-group:last-child article:last-child {
-	
-}
 .channel>h1 {
 	background-color: rgba(51, 51, 51, 1);
 	color: #fff;
 	height: 19px;
-	font-family: "proxima-nova";
+	font-family: "proxima-nova", Helvetica, sans-serif;
 	font-weight: 800;
 	left: 0;
 	line-height: 1.2em;
-	padding: 3px 9px 2px;
+	padding: 3px 11px 2px;
 	position: absolute;
 	text-transform: uppercase;
 	top: 0;
@@ -326,7 +481,7 @@ figure {
 }
 figcaption {
 	color: #666;
-	font-family: "proxima-nova";
+	font-family: "proxima-nova", Helvetica, sans-serif;
 	font-size: .85em;
 	font-style: italic;
 	font-weight: 400;
@@ -340,13 +495,13 @@ img {
 	overflow: hidden;
 }
 article {
-	border-top: 1px dotted #ccc;
+	border-top: 1px dotted rgba(242, 101, 34, .3);
 	margin: 0;
 	overflow: hidden;
 	padding: 10px;
 }
 .gutter .on-the-hour article {
-	border-top: 2px solid rgba(244, 101, 34, 1);	
+	border-top: 2px solid rgba(242, 101, 34, 1);	
 }
 .overlay article {
 	border-top: none;
@@ -363,7 +518,7 @@ article dl {
 	width: 100%;
 }
 article dt {
-	font-family: "proxima-nova";
+	font-family: "proxima-nova", Helvetica, sans-serif;
 	font-size: 1.4em;
 	font-weight: 600;
 	letter-spacing: -.05em;
@@ -374,22 +529,19 @@ article dt {
 	margin: 0 0 .8em;
 }
 .overlay article dt {
-	border-top: 1px dotted #ccc;
-	border-bottom: 1px dotted #ccc;
-	margin: 1.4em 0 .5em;	
-	padding: .5em 0;
+	margin: 1.2em 0 .35em;
 }
 article dt .year {
 	color: #666;
 	font-weight: 100;
 }
 article dd {
-	font-family: "proxima-nova";
+	font-family: "proxima-nova", Helvetica, sans-serif;
 	font-size: 1.2em;
 	line-height: 1.2em;
 }
 article p {
-	font-family: "proxima-nova";
+	font-family: "proxima-nova", Helvetica, sans-serif;
 	font-size: 1em;
 	font-weight: 600;
 	line-height: 1.3em;
@@ -433,14 +585,6 @@ article p + p {
 	padding: .2em .3em;
 	text-transform: uppercase;	
 }
-/*
-.p-details ul li i {
-	color: rgba(242, 101, 34, 1);
-	font-size: 1.6em;
-	line-height: inherit;
-	margin: 0 0 0 -4px;
-}
-*/
 .p-details ul li.hd {
 	background-color: #666;
 	border-radius: 2px;
@@ -483,16 +627,160 @@ article p + p {
 	font-size: 70%;
 	margin: .7em 0 0;
 }
+/* Search page */
+.search {
+	background-color: rgba(242, 101, 34, 1);
+	background-image: url('../images/box.png');
+	background-position: 50% 10px;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+.search form {
+	margin: 0 auto;
+	padding: 110px .85em 0;
+	text-align: center;
+}
+.search form ul li:first-child {
+	background-color: #fff;
+	padding: .5em;
+}
+.search form input {
+	width: 100%;
+}
+.search form input[type="text"] {
+	border: none;
+	font-family: "proxima-nova", Helvetica, sans-serif;
+	font-size: 1.4em;
+	font-weight: 400;
+	text-align: center;
+	-webkit-text-size-adjust: none;
+	width: 90%;
+}
+/* Need to consolidate this CSS into standard button stuff if proceeding with its look... */
+.search form input[type="submit"] {
+	background: #7d7e7d;
+	background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e));
+	background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%);
+	background: -o-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%);
+	background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%);
+	background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 );
+	border: none;
+	color: #fff;
+	font-family: "proxima-nova", Helvetica, sans-serif;
+	font-size: 1.4em;		
+	font-weight: 300;
+	line-height: 1.2em;
+	margin: .5em 0;	
+	padding: 6px 12px;
+	width: 150px;
+}
+.search .options {
+	float: left;
+	margin: .85em;
+}
+.search .options ul {
+	float: left;
+	width: 100%;
+}
+.search .options li {
+	float: left;
+	width: 50%;
+}
+.search .options li.wide {
+	width: 100%;
+}
+.search .options li a {
+	background-color: rgba(0, 0, 0, .2);
+	border: 1px solid rgba(242, 101, 34, 1);
+	color: #fff;
+	display: block;
+	font-family: "proxima-nova", Helvetica, sans-serif;
+	font-size: 1.4em;		
+	font-weight: 600;	
+	padding: .65em;
+	text-decoration: none;
+}
+
+/* Dark theme */
+.dark header {
+	background-color: #333;
+}
+.dark .overlay .page {
+	background-color: #222;
+}
+.dark .channels>ul {
+	background-color: #222;	
+}
+.dark .channel .gutter {
+	border-right: 1px dotted #666;	
+}
+.dark .channel>h1 {
+	background-color: rgba(17, 17, 17, 1);
+}
+.dark article {
+	border-top: 1px dotted #666;
+}
+.dark .gutter .on-the-hour article {
+	border-top: 2px solid #666;	
+}
+.dark article:active {
+	background-color: #333;
+}
+.dark article dt {
+	color: #999;
+}
+.dark .p-time,
+.dark .p-channel {
+	color: #ccc;
+}
+.dark .search {
+	background-color: #333;
+}
+.dark .search .options li a {
+	border-color: #333;
+}
 @media (max-width: 767px) {
 	
 }
-@media (-webkit-min-device-pixel-ratio: 2) {
-	.channel .gutter {
-		background-image: url('../images/bckgrd-dotted@2x.gif');
-		background-size: 1px 2px;
-	}	
+@media (min-width: 768px) {
+	/* A few tests of mark-up for responsive site */
+	.channels,
+	.channels>ul {
+		width: 20%;	
+	}
+	.search .options {
+		float: inherit;
+		margin: .85em auto;
+		width: 520px;
+	}
+	.search form ul li:first-child {
+		margin: 0 auto;
+		width: 500px;
+	}
+	.search form input[type="text"] {
+		width: 50%;
+	}
+}
+@media (max-width: 468px) {
+	/*
+.search .options ul {
+		width: 100%;
+	}
+	.search .options li {
+		width: 25%;
+	}
+*/
+}
+@media (-webkit-min-device-pixel-ratio: 2) {	
 	.closeOverlay {
 		background-image: url('../images/appclosecorner@2x.png');
 		background-size: 63px 63px;
 	}
+	.search {
+		background-image: url('../images/box@2x.png');
+		background-size: 170px 70px;
+	}	
 }

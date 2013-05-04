@@ -24,35 +24,49 @@ $(document).ready(function () {
 		e.preventDefault();
 	});
 
-	// Temporary scroll readout    
-    $('#result').click(function(e){
-    	$('.channels').css({
+	// Temporary measure until how to let user switch between columns is figured out
+	$('.exposeColumns').click(function(e){
+		$('.channels').css({
 	    	'width':'100%'
     	});
-	    e.preventDefault();
-    });
+		e.preventDefault();
+	});
 
     // Helps keep channel names in view, doesn't work so well on phones :(
+   
+    // seems to work quite well, although not when scrolling up
+    //$('.channel>h1').jScroll({speed : 200, top: 55});
+
     // Performance depletion specialist codeage
 	$('.channels>ul').scroll(function (e) {
     	var elementScrollTop = $('.channels>ul').scrollTop();
     	$('.channel>h1').css({
         	"top" : + elementScrollTop
     	});
-    	$("#result").html("scrollTop: <span>" + elementScrollTop + "</span>");
     	e.preventDefault();
     });
     
-	// Change into 12/24 hour times
-	$('.sd-time').hide();
+	// Change into 12/24 hour times + change theme   
+
+	$('.l-theme').click(function(e) {
+		$('body').removeClass('dark');
+		$(this).attr('disabled', true).siblings('button').attr('disabled', false);
+		e.preventDefault();
+	});
+	$('.d-theme').click(function(e) {
+		$('body').addClass('dark');
+		$(this).attr('disabled', true).siblings('button').attr('disabled', false);
+		e.preventDefault();
+	});
+	
+	//$('.sd-time').hide();
 	$('.sd-time').click(function(e) {
 		$('.hour').each(function() {
 			var currentValue = $(this).text();
 			var newValue = parseInt(currentValue) - 12;
 			$(this).text(newValue);
 		});
-		$(this).hide();
-		$('.dd-time').show();
+		$(this).attr('disabled', true).siblings('button').attr('disabled', false);
 		e.preventDefault();
 	});
 	// Doesn't work for AM times (they'll get changed as well!)
@@ -62,14 +76,13 @@ $(document).ready(function () {
 			var newValue = parseInt(currentValue) + 12;
 			$(this).text(newValue);
 		});
-		$(this).hide();
-		$('.sd-time').show();
+		$(this).attr('disabled', true).siblings('button').attr('disabled', false);
 		e.preventDefault();
 	});
 	
 	// Probably not optimised (and overly complicated), but I wrote some JS and it flippin' worked!!!
 	// Target channel lists (but per row, rather than using global content to inform all rows + cols)
-	
+
 	$('.channel .gutter').each(function() {
 		// Loop for each hour of day
 		for (var i = 1; i <= 288; i++) {
