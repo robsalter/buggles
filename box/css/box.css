@@ -507,8 +507,8 @@ article {
 	height: 100%;
 	overflow: hidden;
 }
-.channel:first-child article {
-	margin-left: 5px;
+.channel:last-child article {
+	margin-right: 0;
 }
 .gutter .on-the-hour article {
 	border-top: 2px solid rgba(242, 101, 34, 1);	
