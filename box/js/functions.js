@@ -10,10 +10,12 @@ $(document).ready(function () {
 	// Expose overlay
 	$('article').click(function(e){
 		$('.overlay').addClass('overlayExposed');
+		$(this).addClass('active');
 		e.preventDefault();
 	});
 	$('.closeOverlay').click(function(e){
 		$('.overlay').removeClass('overlayExposed');
+		$('article').removeClass('active');
 		e.preventDefault();
 	});
 	$('.exposeCalendar').click(function(e){
@@ -113,8 +115,20 @@ $(document).ready(function () {
 		}
 	});
 	
+	// I flippin' did it! What a difference two weeks' holiday makes!!!!!!!! Get in!!!!!!! :)
+	// This finds out empty heights (used to align progs) and adds it to the previous prog, then iterates thru grid
+	$('.programme').siblings().nextUntil('.programme').each(function() {
+		var total = $(this).height();
+		//console.log(total);
+		var sum = total;
+			sum - total;
+		//console.log(sum);
+		$(this).prev('.programme').css('height', '+=' + sum);
+		$(this).remove();
+	});
+	
 	// Uses plugin to keep programme details in view when user scrolls down to see suceeding progs
-	// Will work awesomely once programme div can expand into available true prog space/height
+	// Now works awesomely!
 	$('.m-group').ready(function(){
 		var height = $(this).height();
 		if (height > 100) {
@@ -129,134 +143,7 @@ $(document).ready(function () {
 			$(this).remove();
 		}
 	});
-
-
-	/*
-		Somehow we need to find out the heights of the remaining divs with height more than 0
-		Take those values and add them to the '.programme' elements existing heights
-		Then remove those excess divs from the DOM
-		That way, once achieved, all that remains are the visible programmes which will then fill the available space and keep the layout/order
 		
-		Below is my shoddy attempt at trying to do this... here my jQuery/JS knowledge sucks...
-	*/
-
-	var list = [];
-	$('.programme').siblings().nextUntil('.programme', function() {
-		var total = $(this).height();
-		console.log(total);
-		//total += parseInt(list[total]);
-		list.push(total);
-		console.log(list);
-	});
-
-
-    
-	/*
-	
-	// crap JS by Salter
-	
-$('.actively').siblings().nextUntil('.actively').end().each(function() {
-		
-		
-			var total = $(this).height();
-			console.log(total);
-			list.push(total);
-		var sum = total;
-		sum += total;
-		console.log(sum);
-	});
-*/
-
-	
-	
-	/*
-var total = 0;
-	for (var i = 0; i < list.length; i++) {
-	    total += parseInt(list[i]);
-	}
-	
-	console.log(total);
-*/
-	
-	/*
-var someArray = [];
-	var total = 0;
-	
-	$('.actively').siblings().nextUntil('.actively').each(function() {
-		var total = 0;
-		total += $(this).height();
-	});
-	
-	
-for (var i = 0; i < someArray.nextUntil('.actively'); i++) {
-    total += parseInt(someArray[i]);
-}
-*/
-	
-	
-	
-	
-	
-	/*
-$('.actively').siblings().nextUntil('.actively').each(function() {
-		var total = 0;
-		total += $(this).height();
-		console.log(total);
-	});
-*/
-	
-
-/*
-
-
-		//$(this).siblings('article');
-		
-		// var totalheights = $
-		// var nextprog = $(this).siblings().next('article');
-	});
-*/
-	
-	// Target only those articles that start after the hour, whack on some silage
-	// Now pointless and defunct
-	/*
-$('.h-group article:first-child .minutes').each(function() {
-		var minsover = $(this).text();
-		if (minsover == 5) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-five');
-	    }
-	    if (minsover == 10) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-ten');
-	    }
-	    if (minsover == 15) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-fifteen');
-	    }
-	    if (minsover == 20) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-twenty');
-	    }
-	    if (minsover == 25) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-twentyfive');
-	    }
-	    if (minsover == 30) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-thirty');
-	    }
-	    if (minsover == 35) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-thirtyfive');
-	    }
-	    if (minsover == 40) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-forty');
-	    }
-	    if (minsover == 45) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-fortyfive');
-	    }
-	    if (minsover == 50) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-fifty');
-	    }
-	    if (minsover == 55) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-fiftyfive');
-	    }
-	});
-*/
-	
 	/*
 		- PROG GENRES -- for adding to aid easier sight of films, news etc
 		- - - - - - - - - - - -
@@ -264,21 +151,18 @@ $('.h-group article:first-child .minutes').each(function() {
 	*/
 	
 	$('.film').each(function() {
-		$(this).children().children('.p-channel').append(' <i class="icon-film"></i>');
+		$(this).children().children('dt').prepend(' <i class="icon-film"></i>');
 	});
 	$('.sport').each(function() {
-		$(this).children().children('.p-channel').append(' <i class="icon-trophy"></i>');
+		$(this).children().children('dt').prepend(' <i class="icon-trophy"></i>');
 	});
 	$('.news').each(function() {
-		$(this).children().children('.p-channel').append(' <i class="icon-quote-right"></i>');
+		$(this).children().children('dt').prepend(' <i class="icon-quote-right"></i>');
 	});
 	$('.quiz').each(function() {
-		$(this).children().children('.p-channel').append(' <i class="icon-comment-alt"></i>');
+		$(this).children().children('dt').prepend(' <i class="icon-comment-alt"></i>');
 	});
 	$('.food').each(function() {
-		$(this).children().children('.p-channel').append(' <i class="icon-food"></i>');
+		$(this).children().children('dt').prepend(' <i class="icon-food"></i>');
 	});
-	
-	
-	
 });
