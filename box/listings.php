@@ -14,27 +14,6 @@
 					<ul>
 						<li><a href="" class="exposeBack topControl"><i class="icon-reorder"></i><span>Back</span></a></li>
 						<li><a href="" class="exposeCalendar"><span class="calday">Today</span><span class="calnumber">31</span></a></li>
-						<!--
-<li class="calendarswipe">
-							<ul>
-								<li>
-									<a href="">
-										<span class="calnumber">29</span>
-									</a>
-								</li>
-								<li>
-									<a href="">
-										<span class="calnumber">29</span>
-									</a>
-								</li>
-								<li>
-									<a href="">
-										<span class="calnumber">29</span>
-									</a>
-								</li>
-							</ul>
-						</li>
--->
 						<li><a href="" class="exposeColumns topControl"><i class="icon-columns"></i><span>Choose columns</span></a></li>
 					</ul>
 				</header>

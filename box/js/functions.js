@@ -25,6 +25,9 @@ $(document).ready(function () {
 		// switch off exposeBack
 		e.preventDefault();
 	});
+	
+	
+	//$('.channel h1').appendTo('.channels');
 
 	// Temporary measure until how to let user switch between columns is figured out
 	$('.exposeColumns').click(function(e){
@@ -48,8 +51,7 @@ $(document).ready(function () {
     	e.preventDefault();
     });
     
-	// Change into 12/24 hour times + change theme   
-
+	// Change into 12/24 hour times + change theme 
 	$('.l-theme').click(function(e) {
 		$('body').removeClass('dark');
 		$(this).attr('disabled', true).siblings('button').attr('disabled', false);
@@ -84,7 +86,6 @@ $(document).ready(function () {
 	
 	// Probably not optimised (and overly complicated), but I wrote some JS and it flippin' worked!!!
 	// Target channel lists (but per row, rather than using global content to inform all rows + cols)
-
 	$('.channel .gutter').each(function() {
 		// Loop for each hour of day
 		for (var i = 1; i <= 288; i++) {

@@ -10,8 +10,18 @@ body {
 	width: 100%;
 }
 header {
-	background-color: rgba(242, 101, 34, 1);
-	height: 56px;
+/* 	background-color: rgba(242, 101, 34, 1); */
+	background: #f26522;
+	background: -moz-linear-gradient(top,  #f26522 25%, #d85108 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(25%,#f26522), color-stop(100%,#d85108));
+	background: -webkit-linear-gradient(top,  #f26522 25%,#d85108 100%);
+	background: -o-linear-gradient(top,  #f26522 25%,#d85108 100%);
+	background: -ms-linear-gradient(top,  #f26522 25%,#d85108 100%);
+	background: linear-gradient(to bottom,  #f26522 25%,#d85108 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26522', endColorstr='#d85108',GradientType=0 );
+	border-bottom: 1px solid rgba(0, 0, 0, .3);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, .4);
+	height: 50px;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -73,13 +83,13 @@ header li:first-child .topControl {
 	text-align: left;
 }
 header li:first-child .topControl i {
-	margin: .5em 0 0 .3em;
+	margin: .4em 0 0 .3em;
 }
 header li:last-child .topControl {
 	text-align: right;
 }
 header li:last-child .topControl i {
-	margin: .5em .3em 0 0;
+	margin: .4em .3em 0 0;
 }
 header .topControl i {
 	font-size: 1.8em;
@@ -90,10 +100,10 @@ header .topControl span {
 	position: absolute;
 }
 header .exposeCalendar {
-	border: 1px solid rgba(0, 0, 0, .1);
+	border: 1px solid rgba(0, 0, 0, .2);
 	border-radius: 3px;
-	height: 48px;
-	margin: 3px 25%;
+	height: 44px;
+	margin: 2px 25%;
 	text-transform: uppercase;
 }
 header .exposeCalendar span,
@@ -102,15 +112,15 @@ header .exposeCalendar span,
 	display: block;	
 }
 .calday {
-	font-size: .5em;
+	font-size: .4em;
 	font-weight: 400;
 	text-transform: uppercase;
 }
 header .calday {
-	padding: .7em 0 0;
+	padding: .5em 0 0;
 }
 .calnumber {
-	font-size: 2em;
+	font-size: 1.8em;
 	font-weight: 400;
 }
 /*
@@ -137,7 +147,7 @@ header .calendarswipe {
 .calendar {
 	background-color: #000;
 	display: block;
-	height: 126px;
+	height: 120px;
 	overflow: hidden;
 	position: absolute;
 	width: 100%;
@@ -209,7 +219,7 @@ header .calendarswipe {
 .front {
 	background-color: rgba(242, 101, 34, 1);
 	box-sizing: border-box;
-	padding-top: 56px;
+	padding-top: 50px;
 	z-index: 10;
 }
 /*
@@ -413,7 +423,7 @@ header.headerMoved {
 	height: 100%;
 	min-height: 100%;
 	overflow: hidden;
-	width: 50%;	
+	width: 33.3333333%;	
 }
 .channels>ul {
 	background-color: #eee;
@@ -450,31 +460,41 @@ overflow: scroll;
 	border: none;
 }
 .channel .gutter {
-	/* border-right: 1px dotted rgba(242, 101, 34, .3); */
+	/* border-right: 1px dotted #ccc; */
 	box-sizing: border-box;
 	float: left;
 	margin: 24px 0 0;
 	/* Bottom padding for spillover at end of each day */
 	/* Essentially height of header */
-	padding: 0 0 56px;
+	padding: 0 0 50px;
 	width: 100%;
 }
 .channel>h1 {
 	background-color: rgba(51, 51, 51, 1);
+	/*
+border-right: 4px solid rgba(51, 51, 51, 1);
+	border-left: 4px solid rgba(51, 51, 51, 1);
+*/
+
 	color: #fff;
 	height: 19px;
 	font-family: "proxima-nova", Helvetica, sans-serif;
-	font-weight: 800;
+	font-weight: 600;
 	left: 0;
 	line-height: 1.2em;
-	/* margin: 5px 5px 0 0; */
+	margin: 0 4px;
 	padding: 3px 11px 2px;
-	position: fixed;
+	position: absolute;
 	text-transform: uppercase;
 	top: 0;
 	right: 0;
 	z-index: 1;
+	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
+
 /*
 .channel:first-child>h1 {
 	margin-left: 5px;
@@ -502,19 +522,16 @@ img {
 }
 article {
 	background-color: #fff;
-	border-top: 1px solid #eee;
-	margin: 0 5px 10px 0;
+	border: 1px solid #ccc;
+	margin: 0 4px 10px;
 	height: 100%;
 	overflow: hidden;
-}
-.channel:last-child article {
-	margin-right: 0;
 }
 .gutter .on-the-hour article {
 	border-top: 2px solid rgba(242, 101, 34, 1);	
 }
 .overlay article {
-	border-top: none;
+	border: none;
 	margin: 0;
 }
 article:active {
@@ -529,12 +546,13 @@ article dl {
 	width: 100%;
 }
 article dt {
+	color: #333;
 	font-family: "proxima-nova", Helvetica, sans-serif;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	font-weight: 400;
-	letter-spacing: -.05em;
+	letter-spacing: 0;
 	line-height: 1.1em;
-	margin: 1.6em 0 .2em;
+	margin: 1.8em 0 .2em;
 }
 article dt,
 article dd {
@@ -550,14 +568,15 @@ article dt .year {
 }
 article dd {
 	font-family: "proxima-nova", Helvetica, sans-serif;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	line-height: 1.2em;
 }
 article.active {
 	background-color: rgba(242, 101, 34, 1);
 	color: #fff;
 }
-article.active .p-time {
+article.active .p-time,
+article.active dt {
 	color: #fff;
 }
 article.active i {
@@ -636,7 +655,7 @@ article dt i {
 .p-details ul li {
 	color: #666;
 	float: left;
-	font-size: 0.56em;
+	font-size: 0.7em;
 	line-height: 1.1em;
 	margin: 0 .3em 0 0;
 	padding: .2em .3em;
@@ -660,7 +679,7 @@ article dt i {
 	padding: .2em .4em;
 }
 .p-details ul li.replay {
-	background-color: #fc0;
+	background-color: rgba(242, 101, 34, 1);
 	border-radius: 2px;
 	color: #000;
 	font-weight: 400;
@@ -668,7 +687,7 @@ article dt i {
 	text-transform: inherit;
 }
 .p-details ul li.replay a {
-	color: #000;
+	color: #fff;
 	text-decoration: none;
 }
 .p-details ul li.length {
@@ -794,6 +813,18 @@ article dt i {
 	border-color: #333;
 }
 @media (max-width: 767px) {
+	/* no gutter on narrow screens */
+	.channel .gutter {
+		border-right: 1px dotted #ccc;
+	}
+	.channel>h1 {
+		margin: 0;
+	}
+	article {
+		border: none;
+		border-top: 1px solid #ccc;
+		margin: 0 0 10px;
+	}
 	
 }
 @media (min-width: 768px) {
@@ -817,7 +848,7 @@ article dt i {
 	.overlay {
 		margin: 0 auto;
 		width: 25%;
-	}
+	}	
 }
 @media (max-width: 468px) {
 	/*
