@@ -27,7 +27,7 @@ $(document).ready(function () {
 	});
 	
 	
-	//$('.channel h1').appendTo('.channels');
+	//$('.extras').appendTo().parent().parent('.m-group');
 
 	// Temporary measure until how to let user switch between columns is figured out
 	$('.exposeColumns').click(function(e){

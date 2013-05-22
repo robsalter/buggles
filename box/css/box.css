@@ -48,6 +48,10 @@ header ul li:nth-child(2) {
 	text-align: center;
 }
 header ul li:nth-child(2) a {
+	background: rgba(242, 101, 34, 1);
+}
+header ul li:nth-child(2) a:hover,
+header ul li:nth-child(2) a:active {
 	background: #f26522;
 	background: -moz-linear-gradient(top,  #f26522 25%, #d85108 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(25%,#f26522), color-stop(100%,#d85108));
@@ -56,16 +60,6 @@ header ul li:nth-child(2) a {
 	background: -ms-linear-gradient(top,  #f26522 25%,#d85108 100%);
 	background: linear-gradient(to bottom,  #f26522 25%,#d85108 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26522', endColorstr='#d85108',GradientType=0 );
-}
-header ul li:nth-child(2) a:active {
-	background: #d85108;
-	background: -moz-linear-gradient(top,  #d85108 0%, #f26522 75%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d85108), color-stop(75%,#f26522));
-	background: -webkit-linear-gradient(top,  #d85108 0%,#f26522 75%);
-	background: -o-linear-gradient(top,  #d85108 0%,#f26522 75%);
-	background: -ms-linear-gradient(top,  #d85108 0%,#f26522 75%);
-	background: linear-gradient(to bottom,  #d85108 0%,#f26522 75%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d85108', endColorstr='#f26522',GradientType=0 );
 }	
 header ul li:last-child {
 	/* float: right; */
@@ -317,7 +311,7 @@ header.headerMoved {
 	border-bottom-right-radius: 3px;	
 }
 .overlay {
-	background-color: #999;
+	background-color: rgba(0, 0, 0, .4);
 	box-shadow: 2px 0 12px rgba(0, 0, 0, .2);
 	overflow: scroll;
 	-webkit-overflow-scrolling: touch;
@@ -328,6 +322,7 @@ header.headerMoved {
 .overlay .page {
 	background-color: #fff;
 	box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+	position: relative;
 }
 .overlayExposed {
 	-webkit-transform: translateX(0);
@@ -477,13 +472,14 @@ border-right: 4px solid rgba(51, 51, 51, 1);
 */
 
 	color: #fff;
-	height: 19px;
+	height: 17px;
 	font-family: "proxima-nova", Helvetica, sans-serif;
+	font-size: 0.9em;
 	font-weight: 600;
 	left: 0;
 	line-height: 1.2em;
-	margin: 0 4px;
-	padding: 3px 11px 2px;
+	margin: 0;
+	padding: 5px 7px 2px;
 	position: absolute;
 	text-transform: uppercase;
 	top: 0;
@@ -526,6 +522,7 @@ article {
 	margin: 0 4px 10px;
 	height: 100%;
 	overflow: hidden;
+	position: relative;
 }
 .gutter .on-the-hour article {
 	border-top: 2px solid rgba(242, 101, 34, 1);	
@@ -548,16 +545,16 @@ article dl {
 article dt {
 	color: #333;
 	font-family: "proxima-nova", Helvetica, sans-serif;
-	font-size: 1.2em;
+	font-size: 1em;
 	font-weight: 400;
 	letter-spacing: 0;
 	line-height: 1.1em;
-	margin: 1.8em 0 .2em;
+	margin: 1.8em 0 7px;
 }
 article dt,
 article dd {
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 7px;
+	margin-right: 7px;
 }
 .g-prog article:first-child dt {
 	margin: 0 0 .8em;
@@ -568,8 +565,8 @@ article dt .year {
 }
 article dd {
 	font-family: "proxima-nova", Helvetica, sans-serif;
-	font-size: 1.1em;
-	line-height: 1.2em;
+	font-size: 1em;
+	line-height: 1.1em;
 }
 article.active {
 	background-color: rgba(242, 101, 34, 1);
@@ -592,24 +589,31 @@ article p + p {
 	font-weight: 400;
 	text-indent: 1em;
 }
+.p-desc {
+	color: #666;
+	font-size: 0.75em;
+	font-weight: 400;
+	line-height: 1.2em;
+	margin-bottom: 7px;
+}
 .p-time {
 	color: rgba(242, 101, 34, 1);
 	font-weight: 300;
 	position: absolute;
-	top: 10px;
+	top: 7px;
 }
 .p-channel {
 	color: rgba(242, 101, 34, 1);
 	font-weight: 800;
-	left: 50px;
+	left: 100px;
 	position: absolute;
 	top: 20px;
 }
 article dt i {
 	color: #999;
 	position: absolute;
-	right: 10px;
-	top: 10px;
+	right: 5px;
+	top: 7px;
 }
 .on-the-hour .p-time {
 	font-weight: 600;
@@ -679,16 +683,61 @@ article dt i {
 	padding: .2em .4em;
 }
 .p-details ul li.replay {
-	background-color: rgba(242, 101, 34, 1);
-	border-radius: 2px;
-	color: #000;
-	font-weight: 400;
-	padding: .2em .4em;
+	margin: 0;
 	text-transform: inherit;
 }
 .p-details ul li.replay a {
+	background-color: #eee;
+	/* border-radius: 2px; */
+	border: 1px solid #ccc;
+	color: #333;
+	float: left;
+	font-weight: 400;
+	padding: .2em .4em;
+	text-decoration: none;	
+}
+
+.extras {
+	
+	float: left;
+	font-family: "proxima-nova", Helvetica, sans-serif;
+	font-size: .75em;
+
+	line-height: 1.3em;
+	margin: 5px 0;
+	width: 100%;
+/*
+	padding: 7px 0 0;
+	position: absolute;
+	right: 7px;
+*/
+}
+.extras .replay a {
+	background: rgba(242, 101, 34, 1);
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 2px;
 	color: #fff;
+	/* display: block; */
+	font-weight: 600;
+	margin: 0 7px;
+	padding: 4px 6px;
 	text-decoration: none;
+}
+.extras .replay a:hover,
+.extras .replay a:active {
+	background: #f26522;
+	background: -moz-linear-gradient(top,  #f26522 25%, #d85108 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(25%,#f26522), color-stop(100%,#d85108));
+	background: -webkit-linear-gradient(top,  #f26522 25%,#d85108 100%);
+	background: -o-linear-gradient(top,  #f26522 25%,#d85108 100%);
+	background: -ms-linear-gradient(top,  #f26522 25%,#d85108 100%);
+	background: linear-gradient(to bottom,  #f26522 25%,#d85108 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26522', endColorstr='#d85108',GradientType=0 );
+}
+
+
+.p-details ul li.replay a {
+
 }
 .p-details ul li.length {
 	float: right;
@@ -824,8 +873,7 @@ article dt i {
 		border: none;
 		border-top: 1px solid #ccc;
 		margin: 0 0 10px;
-	}
-	
+	}	
 }
 @media (min-width: 768px) {
 	/* A few tests of mark-up for responsive site */
@@ -845,10 +893,36 @@ article dt i {
 	.search form input[type="text"] {
 		width: 50%;
 	}
-	.overlay {
-		margin: 0 auto;
+	.overlay .page {
 		width: 25%;
-	}	
+	}
+	.channel>h1 {
+		padding-left: 11px;
+		padding-right: 11px;
+	}
+	article {
+		border-right: none;
+		margin: 0 0 10px;
+	}
+	article dt,
+	article dd {
+		font-size: 1.1em;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.p-time {
+		top: 10px;
+	}
+	.p-desc {
+		margin-bottom: 10px;
+	}
+	article dt i {
+		right: 10px;
+		top: 10px;
+	}
+	.extras .replay a {
+		margin: 0 10px;
+	}
 }
 @media (max-width: 468px) {
 	/*

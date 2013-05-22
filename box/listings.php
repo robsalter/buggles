@@ -29,12 +29,13 @@
 											<dl>
 												<dt>Masterchef</dt>
 												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">00</span></dd>
-												<dd class="p-details">
-													<ul>
-														<li class="replay"><a href="">Watch again</a></li>
-													</ul>
+												<dd class="p-desc">
+													Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fringilla inceptos ullamcorper sem nullam.
 												</dd>
 											</dl>
+											<ul class="extras">
+												<li class="replay"><a href="http://goggle.com">Catch up</a></li>
+											</ul>										
 										</article>
 									</div>
 									<div class="m-group">
@@ -74,19 +75,17 @@
 									<div class="m-group">
 										<article class="w-i">
 											<dl>
-												<dt>Great Bear Steakout and Chips</dt>
+												<dt>Holby City</dt>
 												<dd class="p-time"><span class="hour">9</span>:<span class="minutes">00</span></dd>
-												<dd class="p-details">
-													<ul>
-														<li class="replay"><a href="">Watch again</a></li>
-													</ul>
-												</dd>
 												<!--
 <dd class="i">
 													<img src="images/appfeatured-2.jpg" alt="Road" />
 												</dd>
 -->
 											</dl>
+											<ul class="extras">
+												<li class="replay"><a href="http://goggle.com">Catch up</a></li>
+											</ul>
 										</article>
 									</div>
 									<div class="m-group">
@@ -160,6 +159,9 @@
 												<dt>A Question of Sport</dt>
 												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">35</span></dd>
 											</dl>
+											<ul class="extras">
+												<li class="replay"><a href="http://goggle.com">Catch up</a></li>
+											</ul>
 										</article>
 									</div>
 									<div class="m-group">
@@ -183,12 +185,10 @@
 											<dl>
 												<dt>Munich</dt>
 												<dd class="p-time"><span class="hour">11</span>:<span class="minutes">05</span></dd>
-												<dd class="p-details">
-													<ul>
-														<li class="replay"><a href="">Watch again</a></li>
-													</ul>
-												</dd>
 											</dl>
+											<ul class="extras">
+												<li class="replay"><a href="http://goggle.com">Catch up</a></li>
+											</ul>
 										</article>
 									</div>
 									<div class="m-group">
@@ -232,12 +232,10 @@
 											<dl>
 												<dt>Coast</dt>
 												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">00</span></dd>
-												<dd class="p-details">
-													<ul>
-														<li class="replay"><a href="">Watch again</a></li>
-													</ul>
-												</dd>
 											</dl>
+											<ul class="extras">
+												<li class="replay"><a href="http://goggle.com">Catch up</a></li>
+											</ul>
 										</article>
 									</div>
 									<div class="m-group">
@@ -349,13 +347,10 @@
 											<dl>
 												<dt>Newsnight</dt>
 												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">30</span></dd>
-												<dd class="p-details">
-													<ul>
-														<li class="hd">HD</li>
-														<li class="replay"><a href="">Watch again</a></li>
-													</ul>
-												</dd>
 											</dl>
+											<ul class="extras">
+												<li class="replay"><a href="http://goggle.com">Catch up</a></li>
+											</ul>
 										</article>
 									</div>
 									<div class="m-group">
@@ -419,7 +414,7 @@
 								</div>	
 							</li>
 							<li class="channel">
-								<h1>ITV1</h1>
+								<h1>ITV 1</h1>
 								<div class="gutter">
 									<div class="m-group">
 										<article>
@@ -459,6 +454,9 @@
 												<dt>Scott &amp; Bailey</dt>
 												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">45</span></dd>
 											</dl>
+											<ul class="extras">
+												<li class="replay"><a href="http://goggle.com">Catch up</a></li>
+											</ul>
 										</article>
 									</div>
 									<div class="m-group">
@@ -606,7 +604,7 @@
 									<div class="m-group">
 										<article>
 											<dl>
-												<dt>Masterchef</dt>
+												<dt>Dispatches</dt>
 												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">00</span></dd>
 											</dl>
 										</article>
@@ -698,7 +696,7 @@
 									<div class="m-group">	
 										<article class="news">
 											<dl>
-												<dt>Channel 4</dt>
+												<dt>Channel 4 News</dt>
 												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">05</span></dd>
 											</dl>
 										</article>
@@ -712,7 +710,9 @@
 												<dt>Regional News and Weather</dt>
 												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">15</span></dd>
 											</dl>
-											<a href="" class="awesome"></a>
+											<ul class="extras">
+												<li class="replay"><a href="http://goggle.com">Catch up</a></li>
+											</ul>
 										</article>
 									</div>
 									<div class="m-group">
@@ -799,7 +799,7 @@
 									<div class="m-group">
 										<article>
 											<dl>
-												<dt>Coast</dt>
+												<dt>Emergency Bikers</dt>
 												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">00</span></dd>
 											</dl>
 										</article>
@@ -820,12 +820,7 @@
 									
 									</div>
 									<div class="m-group">	
-										<article>
-											<dl>
-												<dt>This World</dt>
-												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">30</span></dd>
-											</dl>
-										</article>
+										
 									</div>
 									<div class="m-group">	
 										
@@ -844,7 +839,12 @@
 									</div>
 									
 									<div class="m-group">
-									
+										<article>
+											<dl>
+												<dt>NCIS</dt>
+												<dd class="p-time"><span class="hour">9</span>:<span class="minutes">00</span></dd>
+											</dl>
+										</article>
 									</div>
 									<div class="m-group">
 									
@@ -883,7 +883,7 @@
 									<div class="m-group">	
 										<article>
 											<dl>
-												<dt>Mastermind</dt>
+												<dt>Crimes That Shook The World</dt>
 												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">00</span></dd>
 											</dl>
 										</article>
@@ -904,107 +904,6 @@
 									
 									</div>
 									<div class="m-group">
-										<article>
-											<dl>
-												<dt>Newsnight</dt>
-												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">30</span></dd>
-											</dl>
-										</article>
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									
-									<div class="m-group">	
-										<article class="sport">
-											<dl>
-												<dt>Snooker: The World Championship</dt>
-												<dd class="p-time"><span class="hour">11</span>:<span class="minutes">00</span></dd>
-											</dl>
-										</article>
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-								</div>	
-							</li>
-							<li class="channel">
-								<h1>ITV 2</h1>
-								<div class="gutter">
-									<div class="m-group">
-										<article>
-											<dl>
-												<dt>Coast</dt>
-												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">00</span></dd>
-											</dl>
-										</article>
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">	
-										<article>
-											<dl>
-												<dt>This World</dt>
-												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">30</span></dd>
-											</dl>
-										</article>
-									</div>
-									<div class="m-group">	
 										
 									</div>
 									<div class="m-group">
@@ -1019,40 +918,6 @@
 									<div class="m-group">
 									
 									</div>
-									
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
 									<div class="m-group">
 									
 									</div>
@@ -1060,54 +925,7 @@
 									<div class="m-group">	
 										<article>
 											<dl>
-												<dt>Mastermind</dt>
-												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">00</span></dd>
-											</dl>
-										</article>
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-										<article>
-											<dl>
-												<dt>Newsnight</dt>
-												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">30</span></dd>
-											</dl>
-										</article>
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									
-									<div class="m-group">	
-										<article class="sport">
-											<dl>
-												<dt>Snooker: The World Championship</dt>
+												<dt>Law &amp; Order: Special Victims Unit</dt>
 												<dd class="p-time"><span class="hour">11</span>:<span class="minutes">00</span></dd>
 											</dl>
 										</article>
@@ -1153,7 +971,377 @@
 									<div class="m-group">
 										<article>
 											<dl>
-												<dt>Coast</dt>
+												<dt>Free Speech</dt>
+												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">00</span></dd>
+											</dl>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">	
+										
+									</div>
+									<div class="m-group">	
+										
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									
+									<div class="m-group">
+										<article class="film">
+											<dl>
+												<dt>Bruce Almighty</dt>
+												<dd class="p-time"><span class="hour">9</span>:<span class="minutes">00</span></dd>
+											</dl>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									
+									<div class="m-group">	
+										
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+										
+									</div>
+									<div class="m-group">
+										<article>
+											<dl>
+												<dt>Family Guy</dt>
+												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">35</span></dd>
+											</dl>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									
+									<div class="m-group">	
+										<article>
+											<dl>
+												<dt>Family Guy</dt>
+												<dd class="p-time"><span class="hour">11</span>:<span class="minutes">00</span></dd>
+											</dl>
+											<ul class="extras">
+												<li class="replay"><a href="http://goggle.com">Catch up</a></li>
+											</ul>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+										<article>
+											<dl>
+												<dt>American Dad!</dt>
+												<dd class="p-time"><span class="hour">11</span>:<span class="minutes">20</span></dd>
+											</dl>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+										<article>
+											<dl>
+												<dt>American Dad!</dt>
+												<dd class="p-time"><span class="hour">11</span>:<span class="minutes">40</span></dd>
+											</dl>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+								</div>	
+							</li>
+							<li class="channel">
+								<h1>BBC Four</h1>
+								<div class="gutter">
+									<div class="m-group">
+										<article>
+											<dl>
+												<dt>Stories from the Dark Earth: Meet the Ancestors Revisited</dt>
+												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">00</span></dd>
+											</dl>
+											<ul class="extras">
+												<li class="replay"><a href="http://goggle.com">Catch up</a></li>
+											</ul>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">	
+										
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									
+									<div class="m-group">
+										<article>
+											<dl>
+												<dt>Great Artists in Their Own Words</dt>
+												<dd class="p-time"><span class="hour">9</span>:<span class="minutes">00</span></dd>
+											</dl>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									
+									<div class="m-group">
+										<article>
+											<dl>
+												<dt>Parks and Recreation</dt>
+												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">00</span></dd>
+											</dl>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+										<article>
+											<dl>
+												<dt>Parks and Recreation</dt>
+												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">20</span></dd>
+											</dl>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+										
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+										<article>
+											<dl>
+												<dt>Whatever Happened To The Likely Lads</dt>
+												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">45</span></dd>
+											</dl>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									
+									<div class="m-group">	
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+										<article>
+											<dl>
+												<dt>The Golden Age of Steam Railways</dt>
+												<dd class="p-time"><span class="hour">11</span>:<span class="minutes">15</span></dd>
+											</dl>
+										</article>
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+										
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+									<div class="m-group">
+									
+									</div>
+								</div>	
+							</li>
+							<li class="channel">
+								<h1>ITV 2</h1>
+								<div class="gutter">
+									<div class="m-group">
+										<article>
+											<dl>
+												<dt>Totally Bonkers Guinness World Records</dt>
 												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">00</span></dd>
 											</dl>
 										</article>
@@ -1176,7 +1364,7 @@
 									<div class="m-group">	
 										<article>
 											<dl>
-												<dt>This World</dt>
+												<dt>Totally Bonkers Guinness World Records</dt>
 												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">30</span></dd>
 											</dl>
 										</article>
@@ -1198,7 +1386,12 @@
 									</div>
 									
 									<div class="m-group">
-									
+										<article>
+											<dl>
+												<dt>Benidorm</dt>
+												<dd class="p-time"><span class="hour">9</span>:<span class="minutes">00</span></dd>
+											</dl>
+										</article>
 									</div>
 									<div class="m-group">
 									
@@ -1216,7 +1409,15 @@
 									
 									</div>
 									<div class="m-group">
-									
+										<article>
+											<dl>
+												<dt>Benidorm</dt>
+												<dd class="p-time"><span class="hour">9</span>:<span class="minutes">30</span></dd>
+											</dl>
+											<ul class="extras">
+												<li class="replay"><a href="">Catch up</a></li>
+											</ul>
+										</article>
 									</div>
 									<div class="m-group">
 									
@@ -1235,9 +1436,9 @@
 									</div>
 									
 									<div class="m-group">	
-										<article>
+										<article class="film">
 											<dl>
-												<dt>Mastermind</dt>
+												<dt>The Bourne Identity</dt>
 												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">00</span></dd>
 											</dl>
 										</article>
@@ -1258,12 +1459,7 @@
 									
 									</div>
 									<div class="m-group">
-										<article>
-											<dl>
-												<dt>Newsnight</dt>
-												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">30</span></dd>
-											</dl>
-										</article>
+										
 									</div>
 									<div class="m-group">
 									
@@ -1281,78 +1477,6 @@
 									
 									</div>
 									
-									<div class="m-group">	
-										<article class="sport">
-											<dl>
-												<dt>Snooker: The World Championship</dt>
-												<dd class="p-time"><span class="hour">11</span>:<span class="minutes">00</span></dd>
-											</dl>
-										</article>
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-								</div>	
-							</li>
-							<li class="channel">
-								<h1>BBC Four</h1>
-								<div class="gutter">
-									<div class="m-group">
-										<article>
-											<dl>
-												<dt>British Masters</dt>
-												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">00</span></dd>
-											</dl>
-										</article>
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
 									<div class="m-group">	
 										
 									</div>
@@ -1368,121 +1492,11 @@
 									<div class="m-group">
 									
 									</div>
-									
-									<div class="m-group">
-										<article class="w-i">
-											<dl>
-												<dt>Arne Dahl</dt>
-												<dd class="p-time"><span class="hour">9</span>:<span class="minutes">00</span></dd>
-												<!--
-<dd class="i">
-													<img src="images/appfeatured-2.jpg" alt="Road" />
-												</dd>
--->
-											</dl>
-										</article>
-									</div>
 									<div class="m-group">
 									
 									</div>
 									<div class="m-group">
 									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-										<article>
-											<dl>
-												<dt>Sing James Bond</dt>
-												<dd class="p-time"><span class="hour">10</span>:<span class="minutes">30</span></dd>
-											</dl>
-										</article>
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									
-									<div class="m-group">	
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-									
-									</div>
-									<div class="m-group">
-										<article class="sport">
-											<dl>
-												<dt>Omnibus</dt>
-												<dd class="p-time"><span class="hour">11</span>:<span class="minutes">30</span></dd>
-											</dl>
-										</article>
 									</div>
 									<div class="m-group">
 									
@@ -1601,7 +1615,7 @@
 					<article class="film">
 						<dl>
 							<dt>Those Magnificent Men in Their Flying Machines <span class="year">(1965)</span></dt>
-							<dd class="p-time"><span class="hour">9</span>:<span class="minutes">00</span></dd>
+							<dd class="p-time"><span class="hour">9</span>:<span class="minutes">00</span> &ndash; <span class="hour">10</span>:<span class="minutes">30</span></dd>
 							<dd class="p-channel">BBC 1</dd>
 							<dd class="p-details">
 								<ul>
@@ -1609,7 +1623,7 @@
 									<li class="widescreen">W</li>
 									<li class="subtitles">S</li>
 									<li class="repeat">R</li>
-									<li class="replay"><a href="">Watch again</a></li>
+									<li class="replay"><a href="">Catch up</a></li>
 									<li class="length">120 mins</li>
 								</ul>
 							</dd>
@@ -1624,8 +1638,8 @@
 							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
 						</div>
 					</article>
+					<a href="" class="closeOverlay">Close</a>
 				</div>
-				<a href="" class="closeOverlay">Close</a>
 			</div>
 		</div>
 		
