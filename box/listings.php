@@ -29,9 +29,6 @@
 											<dl>
 												<dt>Masterchef</dt>
 												<dd class="p-time"><span class="hour">8</span>:<span class="minutes">00</span></dd>
-												<dd class="p-desc">
-													Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fringilla inceptos ullamcorper sem nullam.
-												</dd>
 											</dl>
 											<ul class="extras">
 												<li class="replay"><a href="http://goggle.com">Catch up</a></li>

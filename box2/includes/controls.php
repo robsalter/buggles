@@ -1,13 +1,8 @@
 				<div class="controls">
 					<ul>
-						<li class="wide"><a href="index.php">Search</a></li>
-						<li class="wide"><a href="listings.php">What's on</a></li>
-						<li class="cat"><a href="">Film</a></li>
-						<li><a href="">Sport</a></li>
-						<li class="cat"><a href="">Children</a></li>
-						<li><a href="">News</a></li>
-						<li class="cat"><a href="">Factual</a></li>
-						<li><a href="">Comedy</a></li>
+						<li><a href="index.php">Search</a></li>
+						<li><a href="listings.php">Listings</a></li>
+						<li><a href="vert.php">Alt. view (unfinished)</a></li>
 					</ul>
 					<ul class="buttons">	
 						<li class="clock">
