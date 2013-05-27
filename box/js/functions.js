@@ -6,11 +6,13 @@ var loaded = 0; day = 'today', now = new Date(), activeChannel = 1, cache = {}, 
     bbc1: {uri:'bbcone', regions: ['london'], color:'#df180e'}, 
     bbc2: {uri:'bbctwo', regions: ['england','wales','scotland','ni','hd'], color:'#01454e'},
     bbc3: {uri:'bbcthree', regions: [], color:'#450e38'},
-    bbc4: {uri:'bbcfour', regions: [], color:'#000000'},
+    bbc4: {uri:'bbcfour', regions: [], color:'#000000'}/*
+,
     cbbc: {uri:'cbbc', regions: [], color:'#ff0000'},
     cbeebies: {uri:'cbeebies', regions: [], color:'#ff0000'},
     parliament: {uri:'bbc_parliament', regions: [], color:'#ff0000'},
     news: {uri:'bbcnews', regions: [], color:'#ff0000'}
+*/
 };
 
 var loadAll = function () {
@@ -36,7 +38,7 @@ var getList = function (channel, hide) {
 
 var checkDone = function() {
     loaded++;
-    if (loaded === 8) {
+    if (loaded === 4) {
         init();
     }
 }
@@ -86,9 +88,9 @@ var init = function() {
 	});
 	// Expose overlay
 	$('article').click(function(e){
-    var cl = $(this).attr('class').split('-'), o = cache[cl[0]][cl[1]];
+    	var cl = $(this).attr('class').split('-'), o = cache[cl[0]][cl[1]];
 		e.preventDefault();
-    console.log(o);
+		console.log(o);
 		$('.overlay').addClass('overlayExposed');
 	});
 	$('.closeOverlay').click(function(e){
@@ -220,133 +222,6 @@ var init = function() {
 			$(this).remove();
 		}
 	});
-
-
-	/*
-		Somehow we need to find out the heights of the remaining divs with height more than 0
-		Take those values and add them to the '.programme' elements existing heights
-		Then remove those excess divs from the DOM
-		That way, once achieved, all that remains are the visible programmes which will then fill the available space and keep the layout/order
-		
-		Below is my shoddy attempt at trying to do this... here my jQuery/JS knowledge sucks...
-	*/
-
-	var list = [];
-	$('.programme').siblings().nextUntil('.programme', function() {
-		var total = $(this).height();
-		console.log(total);
-		//total += parseInt(list[total]);
-		list.push(total);
-		console.log(list);
-	});
-
-
-    
-	/*
-	
-	// crap JS by Salter
-	
-$('.actively').siblings().nextUntil('.actively').end().each(function() {
-		
-		
-			var total = $(this).height();
-			console.log(total);
-			list.push(total);
-		var sum = total;
-		sum += total;
-		console.log(sum);
-	});
-*/
-
-	
-	
-	/*
-var total = 0;
-	for (var i = 0; i < list.length; i++) {
-	    total += parseInt(list[i]);
-	}
-	
-	console.log(total);
-*/
-	
-	/*
-var someArray = [];
-	var total = 0;
-	
-	$('.actively').siblings().nextUntil('.actively').each(function() {
-		var total = 0;
-		total += $(this).height();
-	});
-	
-	
-for (var i = 0; i < someArray.nextUntil('.actively'); i++) {
-    total += parseInt(someArray[i]);
-}
-*/
-	
-	
-	
-	
-	
-	/*
-$('.actively').siblings().nextUntil('.actively').each(function() {
-		var total = 0;
-		total += $(this).height();
-		console.log(total);
-	});
-*/
-	
-
-/*
-
-
-		//$(this).siblings('article');
-		
-		// var totalheights = $
-		// var nextprog = $(this).siblings().next('article');
-	});
-*/
-	
-	// Target only those articles that start after the hour, whack on some silage
-	// Now pointless and defunct
-	/*
-$('.h-group article:first-child .minutes').each(function() {
-		var minsover = $(this).text();
-		if (minsover == 5) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-five');
-	    }
-	    if (minsover == 10) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-ten');
-	    }
-	    if (minsover == 15) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-fifteen');
-	    }
-	    if (minsover == 20) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-twenty');
-	    }
-	    if (minsover == 25) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-twentyfive');
-	    }
-	    if (minsover == 30) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-thirty');
-	    }
-	    if (minsover == 35) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-thirtyfive');
-	    }
-	    if (minsover == 40) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-forty');
-	    }
-	    if (minsover == 45) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-fortyfive');
-	    }
-	    if (minsover == 50) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-fifty');
-	    }
-	    if (minsover == 55) {
-		    $(this).parent().parent().parent().parent().addClass('h-group-overlap h-g-o-fiftyfive');
-	    }
-	});
-*/
 	
 	/*
 		- PROG GENRES -- for adding to aid easier sight of films, news etc
