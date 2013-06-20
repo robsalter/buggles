@@ -1,6 +1,7 @@
 				<div class="controls">
 					<ul>
 						<li class="wide"><a href="index.php">Search</a></li>
+						<li class="wide"><a href="listings-horz.php">Horizontal test</a></li>
 						<li class="wide"><a href="listings.php">What's on</a></li>
 						<li class="cat"><a href="">Film</a></li>
 						<li><a href="">Sport</a></li>

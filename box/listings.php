@@ -168,7 +168,7 @@
 							<figcaption>Philip Larkin had it right...</figcaption>
 						</figure>
 						<div class="col">
-							<p>A rare event for cult movie fans, BBC Four, that doyen of sophiscated European TV and film (yeah, right) brings this cinematic classic to the viewers of post-watershed crap TV.</p>
+							<p>A rare event for cult movie fans, BBC Four, that doyen of sophisticated European TV and film (yeah, right) brings this cinematic classic to the viewers of post-watershed crap TV.</p>
 							<p>Hey, I could write TV reviews for a living. A few superlatives here, a few choice words there. Easy. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
 						</div>

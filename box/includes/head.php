@@ -28,6 +28,7 @@
 		<script type="text/javascript" src="js/jquery.hammer.js"></script>
 		<script type="text/javascript" src="js/jscroll-1.0.min.js"></script>
 		<script type="text/javascript" src="js/functions-swipe.js"></script>
+		<script type="text/javascript" src="js/functions-swipeup.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
 		
 		<script type="text/javascript" src="//use.typekit.net/jeo5see.js"></script>

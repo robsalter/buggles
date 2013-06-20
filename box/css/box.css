@@ -884,6 +884,41 @@ article dt i {
 .dark .search .options li a {
 	border-color: #333;
 }
+
+.channels-horz,
+.channels-horz>ul {
+	background-color: #fc0;
+	height: 100%;
+	overflow: hidden;
+	width: 100%;	
+}
+.channels-horz li {
+	height: 100%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	width: 100%;	
+}
+.channels-horz .channel-horz {
+	height: 25%;
+	position: relative;
+	width: 100%;
+}
+.channels-horz .channel-horz .c-name {
+	background-color: #333;
+	color: #fff;
+	float: left;
+	width: 25%;
+}
+.channels-horz .channel-horz .c-progs {
+	float: left;
+	width: 75%;
+}
+.m-h-group {
+	float: left;
+}
+
+
+
 @media (max-width: 767px) {
 	/* no gutter on narrow screens */
 	.channel .gutter {
