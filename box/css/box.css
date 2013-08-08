@@ -676,7 +676,9 @@ article dt i {
 	font-size: 1em;
 	margin-left: -3px;
 }
-
+.overlay li.replay {
+  float:right;
+}
 .p-details ul li {
 	color: #666;
 	float: left;
